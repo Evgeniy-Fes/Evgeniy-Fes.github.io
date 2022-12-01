@@ -1,0 +1,152 @@
+body {
+    width: 1500px;
+    background-color: black;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background-image: url(media/background.png);
+}
+
+.img-logo {
+    width: 150px;
+    height: 80px;
+}
+
+.head {
+    color: blue;
+    font-size: 50px;
+}
+
+.navigation-list {
+    display: flex;
+    list-style-type: none;
+    gap: 15px;
+}
+
+.navigation-item {
+    border: 1px solid #fff;
+    background-color: #fff;
+    margin-right: 30px;
+}
+
+.navigation-link {
+    text-decoration: none;
+    color: orangered;
+}
+
+.film {
+    padding-top: 75px;
+    padding-left: 100px;
+}
+
+.film-name {
+    font-size: 35px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.film-size {
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+
+.film-list {
+    display: flex;
+    gap: 25px;
+    padding: 20px 15px;
+}
+
+.film-item {
+    list-style-type: none;
+    color: #fff;
+}
+
+.film-text {
+    color: #fff;
+}
+
+.film-nav-list {
+    display: flex;
+    gap: 10px;
+    padding-top: 15px;
+}
+
+.film-nav-item {
+    list-style-type: none;
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 15px;
+    background-color: blue;
+}
+
+.film-nav-link {
+    text-decoration: none;
+    color: #fff;
+}
+
+.recommendations {
+    padding-top: 110px;
+    padding-bottom: 50px;
+}
+
+.recommendations-text {
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    padding-left: 70px;
+    padding-bottom: 25px;
+}
+
+.recommendations-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.recommendations-item {
+    list-style-type: none;
+    color: #fff;
+    width: 200px;
+    height: 200px;
+}
+
+.img-foto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.film-bottom {
+    padding-top: 15px;
+}
+
+.film-link {
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 15px;
+    background-color: blue;
+}
+
+.film-end {
+    padding-left: 50px;
+    background-image: url(media/sleep.png);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.film-week {
+    font-size: 30px;
+    color: #fff;
+}
+
+.film-price {
+    color: #fff;
+    font-size: 25px;
+    padding-bottom: 15px;
+}

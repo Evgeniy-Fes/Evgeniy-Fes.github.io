@@ -1,5 +1,4 @@
 body {
-    width: 1500px;
     background-color: black;
 }
 
@@ -37,6 +36,13 @@ body {
 .navigation-link {
     text-decoration: none;
     color: orangered;
+}
+
+.container {
+    width: 1200px;
+    padding-top: 75px;
+    padding-left: 100px;
+    padding-bottom: 75px;
 }
 
 .film {
@@ -110,6 +116,10 @@ body {
 .recommendations-item {
     list-style-type: none;
     color: #fff;
+    width: 200px;
+}
+
+.wrapper-img {
     width: 200px;
     height: 200px;
 }

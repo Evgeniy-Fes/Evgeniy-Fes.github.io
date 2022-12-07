@@ -46,8 +46,8 @@ body {
 }
 
 .film {
-    padding-top: 75px;
-    padding-left: 100px;
+    background-image: url(media/незнакомец.jpeg);
+    padding: 60px 60px;
 }
 
 .film-name {

@@ -1,0 +1,21 @@
+.container {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 40px 140px;
+}
+
+.main-header {
+    background-color: #FFE17F;
+}
+
+.navigation {
+    display: flex;
+}
+
+.navigation-list {
+    display: flex;
+}
+
+.description-block {
+    display: flex;
+}

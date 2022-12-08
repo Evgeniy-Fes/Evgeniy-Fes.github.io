@@ -1,5 +1,5 @@
 body {
-    background-color: black;
+    background-color: rgb(33, 31, 31);
 }
 
 .page-header {
@@ -17,8 +17,10 @@ body {
 }
 
 .head {
-    color: blue;
+    color: rgb(118, 76, 31);
     font-size: 50px;
+    font-weight: bolder;
+    text-shadow: 1px 1px 1px #000;
 }
 
 .navigation-list {
@@ -28,9 +30,10 @@ body {
 }
 
 .navigation-item {
-    border: 1px solid #fff;
-    background-color: #fff;
+    border: 1px solid #fff transparent;
+    border-radius: 5px;
     margin-right: 30px;
+    background: linear-gradient(to right, rgb(37, 37, 37), 80%, rgb(122, 120, 120));
 }
 
 .navigation-link {
@@ -40,31 +43,33 @@ body {
 
 .container {
     width: 1200px;
-    padding-top: 75px;
-    padding-left: 100px;
-    padding-bottom: 75px;
+    margin: 0 auto;
+    padding: 75px 100px;
+    background-color: rgb(19, 18, 18);
 }
 
-.film {
+.film-one {
     background-image: url(media/незнакомец.jpeg);
-    padding: 60px 60px;
+    padding: 40px 40px;
 }
 
 .film-name {
-    font-size: 35px;
+    font-size: 43px;
     color: #fff;
     font-weight: bold;
+    text-shadow: 1px 1px 1px #000;
 }
 
 .film-size {
     padding-top: 20px;
     padding-bottom: 15px;
+    text-shadow: 1px 1px 1px #000;
 }
 
 .film-list {
     display: flex;
-    gap: 25px;
-    padding: 20px 15px;
+    gap: 15px;
+    padding: 10px 10px 10px 0;
 }
 
 .film-item {
@@ -78,16 +83,16 @@ body {
 
 .film-nav-list {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     padding-top: 15px;
 }
 
 .film-nav-item {
     list-style-type: none;
-    border: 1px solid black;
-    border-radius: 30px;
+    border: 1px solid #ccc transparent;
+    border-radius: 5px;
     padding: 15px;
-    background-color: blue;
+    background: linear-gradient(to right, rgb(37, 37, 37), 80%, rgb(122, 120, 120));
 }
 
 .film-nav-link {
@@ -95,16 +100,20 @@ body {
     color: #fff;
 }
 
+.film-nav-item:first-child {
+    background: linear-gradient(to right, blue, 60%, rgb(179, 190, 248));
+}
+
 .recommendations {
-    padding-top: 110px;
+    padding-top: 50px;
     padding-bottom: 50px;
 }
 
 .recommendations-text {
     color: #fff;
-    font-size: 35px;
+    font-size: 30px;
     font-weight: bold;
-    padding-left: 70px;
+    padding-left: 50px;
     padding-bottom: 25px;
 }
 
@@ -130,33 +139,104 @@ body {
     object-fit: cover;
 }
 
+.film-two {
+    width: 100%;
+    height: 300px;
+    border: #fff transparent;
+    border-radius: 5px;
+    background-image: url(media/космос.jpg);
+    background-repeat: no-repeat;
+    background-size: 1200px 400px;
+    padding: 50px 70px;
+}
+
 .film-bottom {
-    padding-top: 15px;
+    padding-top: 25px;
 }
 
 .film-link {
     text-decoration: none;
     color: #fff;
-    border: 1px solid black;
-    border-radius: 30px;
+    border: #fff transparent;
+    border-radius: 5px;
     padding: 15px;
-    background-color: blue;
-}
-
-.film-end {
-    padding-left: 50px;
-    background-image: url(media/sleep.png);
-    background-repeat: no-repeat;
-    background-position: right;
+    background: linear-gradient(to right, rgb(37, 37, 37), 80%, rgb(122, 120, 120));
 }
 
 .film-week {
-    font-size: 30px;
+    width: 150px;
+    font-size: 17px;
+    font-weight: 500;
+    text-align: center;
+    border: #fff transparent;
+    border-radius: 35px;
+    padding: 7px;
+    background: linear-gradient(to right, rgb(255, 115, 0), 50%, rgb(247, 190, 111));
     color: #fff;
+}
+
+.film-description-name {
+    font-size: 50px;
+    font-weight: bolder;
+    color: #fff;
+    padding-top: 15px;
 }
 
 .film-price {
     color: #fff;
-    font-size: 25px;
-    padding-bottom: 15px;
+    font-size: 30px;
+    padding-top: 10px;
+}
+
+.bold {
+    font-weight: bolder;
+}
+
+.film-three {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 100px 0;
+    color: #fff;
+}
+
+.description-list {
+    display: flex;
+    gap: 30px;
+    padding-top: 70px;
+    padding-bottom: 30px;
+}
+
+.description-link {
+    text-decoration: none;
+    color: rgb(120, 119, 119);
+}
+
+.description-link:hover {
+    color: #fff;
+    border-bottom: 3px solid rgb(94, 94, 222);
+}
+
+.text-up {
+    padding-top: 30px;
+}
+
+.img-general {
+    padding-bottom: 30px;
+}
+
+.general-sleep {
+    width: 550px;
+    height: 340px;
+}
+
+.title-img {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 550px;
+}
+
+.title-sleep {
+    width: 260px;
+    height: 120px;
 }

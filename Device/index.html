@@ -3,53 +3,50 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./reset.css">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
     <title>Device</title>
 </head>
 
 <body>
     <div class="container">
-        <header class="main-header">
-            <nav class="navigation">
-                <div class="right-header">
-                    <div class="navigation-form">
-                        <form class="search-form">
+        <header class="header">
+                <div class="header__top">
+                    <div class="header__form">
+                        <form class="header__search-form">
                             <input type=" text" name="text" class="search" placeholder="Текс поиска">
                             <input type="submit" name="submit" class="submit" value="Найти">
                         </form>
                     </div>
-                    <div class="catalog">
-                        <a class="navigation-link-down" href="#">Каталог товаров</a>
+                    <div class="header__menu-top">
+                        <div class="header__menu_list-top">
+                            <a class="header__menu_link-top" href="#">Войти</a>
+                        </div>
+                        <div class="header__menu_list">
+                            <a class="header__menu_link-top" href="#">Сравнить</a>
+                        </div>
+                        <div class="header__menu_list">
+                            <a class="header__menu_link-top" href="#">Корзина</a>
+                        </div>
                     </div>
                 </div>
-                <div class="left-header">
-                    <ul class="navigation-list">
-                        <li class="navigation-item">
-                            <a class="navigation-link-up" href="#">Войти</a>
-                        </li>
-                        <li class="navigation-item">
-                            <a class="navigation-link-up" href="#">Сравнить</a>
-                        </li>
-                        </li>
-                        <li class="navigation-item">
-                            <a class="navigation-link-up" href="#">Корзина</a>
-                        </li>
-                    </ul>
-                    </ul>
-                    <ul class="navigation-list">
-                        <li class="navigation-item">
-                            <a class="navigation-link-down" href="#">Доставка</a>
-                        </li>
-                        <li class="navigation-item">
-                            <a class="navigation-link-down" href="#">Гарантия</a>
-                        </li>
-                        <li class="navigation-item">
-                            <a class="navigation-link-down" href="#">Контакты</a>
-                        </li>
-                    </ul>
+                <div class="header__low">
+                    <div class="header__buttom">
+                        <a class="header__buttom-catalog" href="#">Каталог товаров</a>
+                    </div>
+                    <div class="header__menu-low">
+                        <div class="header__menu_list-low">
+                            <a class="header__menu_link-low" href="#">Доставка</a>
+                        </div>
+                        <div class="header__menu_list">
+                            <a class="header__menu_link-low" href="#">Гарантия</a>
+                        </div>
+                        <div class="header__menu_list">
+                            <a class="header__menu_link-low" href="#">Контакты</a>
+                        </div>
+                    </div>
                 </div>
-            </nav>
+            </div>
         </header>
 
         <main class="main-index">

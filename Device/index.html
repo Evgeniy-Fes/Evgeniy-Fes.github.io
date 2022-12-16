@@ -3,47 +3,46 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
     <title>Device</title>
 </head>
 
 <body>
     <div class="container">
         <header class="header">
-                <div class="header__top">
-                    <div class="header__form">
-                        <form class="header__search-form">
-                            <input type=" text" name="text" class="search" placeholder="Текс поиска">
-                            <input type="submit" name="submit" class="submit" value="Найти">
-                        </form>
+            <div class="header-top">
+                <div class="header-top__find">
+                    <form class="header-top__form">
+                        <input type=" text" name="text" class="header-top__search" placeholder="Текс поиска">
+                        <input type="submit" name="submit" class="header-top__submit" value="Найти">
+                    </form>
+                </div>
+                <div class="header-top__menu">
+                    <div class="header-top__item">
+                        <a class="header-top__link" href="#">Войти</a>
                     </div>
-                    <div class="header__menu-top">
-                        <div class="header__menu_list-top">
-                            <a class="header__menu_link-top" href="#">Войти</a>
-                        </div>
-                        <div class="header__menu_list">
-                            <a class="header__menu_link-top" href="#">Сравнить</a>
-                        </div>
-                        <div class="header__menu_list">
-                            <a class="header__menu_link-top" href="#">Корзина</a>
-                        </div>
+                    <div class="header-top__item">
+                        <a class="header-top__link" href="#">Сравнить</a>
+                    </div>
+                    <div class="header-top__item">
+                        <a class="header-top__link" href="#">Корзина</a>
                     </div>
                 </div>
-                <div class="header__low">
-                    <div class="header__buttom">
-                        <a class="header__buttom-catalog" href="#">Каталог товаров</a>
+            </div>
+            <div class="header-low">
+                <div class="header-low__buttom">
+                    <a class="header-low__catalog" href="#">Каталог товаров</a>
+                </div>
+                <div class="header-low__menu">
+                    <div class="header-low__item">
+                        <a class="header-low__list" href="#">Доставка</a>
                     </div>
-                    <div class="header__menu-low">
-                        <div class="header__menu_list-low">
-                            <a class="header__menu_link-low" href="#">Доставка</a>
-                        </div>
-                        <div class="header__menu_list">
-                            <a class="header__menu_link-low" href="#">Гарантия</a>
-                        </div>
-                        <div class="header__menu_list">
-                            <a class="header__menu_link-low" href="#">Контакты</a>
-                        </div>
+                    <div class="header-low__item">
+                        <a class="header-low__list" href="#">Гарантия</a>
+                    </div>
+                    <div class="header-low__item">
+                        <a class="header-low__list" href="#">Контакты</a>
                     </div>
                 </div>
             </div>
@@ -112,45 +111,52 @@
                 <h3 class="delivery-main">Доставка</h3>
                 <p class="delivery-text">Мы с удовольствием доставим ваш товар прямо
                     <br>к вашему подъезду совершенно бесплатно! Ведь
-                    <br>мы неплохо заработаем, поднимая его на ваш этаж.</p>
+                    <br>мы неплохо заработаем, поднимая его на ваш этаж.
+                </p>
             </section>
             <div class="delivery-rare">
-            <p class="delivery-rare-text">Доставим редкий товар под заказ</p>
-        </div>
-                <section class="about">
-                    <h2 class="about-main">О нас</h2>
-                    <p class="about-text">Огромный выбор гаджетов не оставит равнодушным<br>гика, который есть в каждом из нас.</p>
-                    <p class="about-tex class">Мы можем доставить ваш товар в самые отдалённые<br>уголки России транспортными компаниями:</p>
-                    <ul class="about-list">
-                        <li class="about-item">Меловые линии</li>
-                        <li class="about-item">СДИК</li>
-                        <li class="about-item">ТоксБерри</li>
-                    </ul>
-                    <a class="about-nav" href="">Подробнее о нас</a>
-                </section>
-                <section class="contacts">
-                    <h2 class="cotacts-main">Контакты</h2>
-                    <p class="cotacts-text">Вы можете забрать товар сами, заехав в наш офис.<br>Заодно сможете проверить работоспособность
-                        покупки.</p>
-                    <h4 class="cotacts-title">Интернет-магазин "Девайс"</h4>
-                    <p class="cotacts-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
-                    <a class="cotacts-nav" href="">+7 (812) 812-12-12</a>
-                    <h4 class="cotacts-title">Время работы</h4>
-                    <p class="cotacts-text">пн—пт: с 10:00 до 22:00 <br> сб—вс: с 10:00 до 19:00</p>
-                    <a class="cotacts-nav" href="">Напишите нам</a>
-                </section>
-                <section class="subscription">
-                    <h3 class="subscription-main">Подпишитесь<br>на рассылку</h3>
-                    <p class="subscription-text">Еженедельный дайджест с обзорами новинок,<br>длительными тест-драйвами, распаковками, а также
-                        акции,
-                        <br>спецпредложения и вот это вот всё.
-                    </p>
-                    <form class="subscription-form">
-                        <input type="text" placeholder="Ваш e-mail" name="mail" required>
-                        <input type="submit" value="Подписаться">
-                    </form>
-                    <p class="subscription-text">Это бесплатно</p>
-                </section>
+                <p class="delivery-rare-text">Доставим редкий товар под заказ</p>
+            </div>
+            <section class="about">
+                <h2 class="about-main">О нас</h2>
+                <p class="about-text">Огромный выбор гаджетов не оставит равнодушным<br>гика, который есть в каждом из
+                    нас.
+                </p>
+                <p class="about-tex class">Мы можем доставить ваш товар в самые отдалённые<br>уголки России
+                    транспортными
+                    компаниями:</p>
+                <ul class="about-list">
+                    <li class="about-item">Меловые линии</li>
+                    <li class="about-item">СДИК</li>
+                    <li class="about-item">ТоксБерри</li>
+                </ul>
+                <a class="about-nav" href="">Подробнее о нас</a>
+            </section>
+            <section class="contacts">
+                <h2 class="cotacts-main">Контакты</h2>
+                <p class="cotacts-text">Вы можете забрать товар сами, заехав в наш офис.<br>Заодно сможете проверить
+                    работоспособность
+                    покупки.</p>
+                <h4 class="cotacts-title">Интернет-магазин "Девайс"</h4>
+                <p class="cotacts-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
+                <a class="cotacts-nav" href="">+7 (812) 812-12-12</a>
+                <h4 class="cotacts-title">Время работы</h4>
+                <p class="cotacts-text">пн—пт: с 10:00 до 22:00 <br> сб—вс: с 10:00 до 19:00</p>
+                <a class="cotacts-nav" href="">Напишите нам</a>
+            </section>
+            <section class="subscription">
+                <h3 class="subscription-main">Подпишитесь<br>на рассылку</h3>
+                <p class="subscription-text">Еженедельный дайджест с обзорами новинок,<br>длительными тест-драйвами,
+                    распаковками, а также
+                    акции,
+                    <br>спецпредложения и вот это вот всё.
+                </p>
+                <form class="subscription-form">
+                    <input type="text" placeholder="Ваш e-mail" name="mail" required>
+                    <input type="submit" value="Подписаться">
+                </form>
+                <p class="subscription-text">Это бесплатно</p>
+            </section>
         </main>
         <footer class="footer-main">
             <ul class="footer-list">
@@ -188,13 +194,15 @@
                 <div class="form-order-row">
                     <div class="form-order-input-wrapper col-66">
                         <label for="delivery-text" class="form-order-input-label">Что нужно привезти:</label>
-                        <input type="text" name="delivery-text" placeholder="В свободной форме" class="form-order-input">
+                        <input type="text" name="delivery-text" placeholder="В свободной форме"
+                            class="form-order-input">
                     </div>
                     <div class="form-count-wrapper col-33">
                         <label for="count" class="form-order-input-label">Количество:</label>
                         <div class="form-count">
                             <div class="form-count__item form-count__item_minus">-</div>
-                            <input class="form-count__item form-order-input form-count__item_value" type="text" value="0" name="count" />
+                            <input class="form-count__item form-order-input form-count__item_value" type="text"
+                                value="0" name="count" />
                             <div class="form-count__item form-count__item_plus">+</div>
                         </div>
                     </div>
@@ -208,11 +216,11 @@
     </div>
 
     <script>
-        document.querySelector('.open-modal').addEventListener('click', function(){
+        document.querySelector('.open-modal').addEventListener('click', function () {
             const modal = document.querySelector('.modal')
             modal.classList.add('active')
         })
-        document.addEventListener("click", function(e) {
+        document.addEventListener("click", function (e) {
             if (e.target.classList.contains("modal-close")) {
                 const modal = document.querySelector('.modal')
                 modal.classList.remove('active')
@@ -221,14 +229,15 @@
     </script>
 
     <style>
-        .modal{
+        .modal {
             display: none;
             width: 100%;
             height: 100%;
             position: fixed;
             inset: 0;
         }
-        .modal-bg{
+
+        .modal-bg {
             width: 100%;
             height: 100%;
             background: rgba(240, 240, 240, 0.9);
@@ -236,10 +245,12 @@
             inset: 0;
             cursor: pointer;
         }
-        .modal.active{
+
+        .modal.active {
             display: block;
         }
-        .modal-body{
+
+        .modal-body {
             width: 920px;
             background: #FFFFFF;
             border: 10px solid #000000;
@@ -248,40 +259,41 @@
             position: fixed;
             top: 50%;
             left: 50%;
-            transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%);
         }
-        .modal-close{
+
+        .modal-close {
             cursor: pointer;
         }
 
-        .form-order{
+        .form-order {
             display: flex;
             flex-direction: column;
             gap: 42px;
         }
 
-        .form-order-title{
+        .form-order-title {
             font-weight: 800;
             font-size: 50px;
             line-height: 50px;
             color: #000000;
         }
 
-        .form-order-row{
+        .form-order-row {
             display: flex;
             justify-content: flex-start;
             align-items: center;
             gap: 40px;
         }
 
-        .form-order-row-top{
+        .form-order-row-top {
             display: flex;
             justify-content: space-between;
         }
-        .form-order-input-wrapper{
 
-        }
-        .form-order-input-label{
+        .form-order-input-wrapper {}
+
+        .form-order-input-label {
             display: block;
             font-weight: 700;
             font-size: 18px;
@@ -290,7 +302,8 @@
             color: #000000;
             margin-bottom: 14px;
         }
-        .form-order-input{
+
+        .form-order-input {
             display: block;
             width: 100%;
             height: 60px;
@@ -304,11 +317,11 @@
             color: #000000;
         }
 
-        .form-order-input::placeholder{
+        .form-order-input::placeholder {
             color: #000000;
             opacity: 0.3;
         }
-        
+
         .submit-button {
             display: inline-block;
             background-color: transparent;
@@ -324,7 +337,8 @@
             position: relative;
             padding: 0 30px;
         }
-        .submit-button::before{
+
+        .submit-button::before {
             content: '';
             display: block;
             position: absolute;
@@ -337,7 +351,7 @@
             z-index: -1;
         }
 
-        .form-count{
+        .form-count {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -345,7 +359,7 @@
             height: 60px;
         }
 
-        .form-count__item{
+        .form-count__item {
             width: 33.33333%;
             display: flex;
             align-items: center;
@@ -354,15 +368,18 @@
             cursor: pointer;
         }
 
-        .col-50{
+        .col-50 {
             width: 50%;
         }
-        .col-66{
+
+        .col-66 {
             width: 66%;
         }
-        .col-33{
+
+        .col-33 {
             width: 33%;
         }
     </style>
 </body>
+
 </html>

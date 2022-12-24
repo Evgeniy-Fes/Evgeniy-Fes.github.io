@@ -16,7 +16,7 @@ const minify = require('gulp-minify');
 gulp.task('style', function() {
     return gulp.src(['src/css/**/*.scss'])
         .pipe(sourcemaps.init())
-        .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+        .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false

@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/reset.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
     <title>Device</title>
 </head>
@@ -12,37 +13,37 @@
     <div class="container">
         <header class="header">
             <div class="header-top">
-                <div class="header-top__find">
+                <div class="header-top__find header-left">
                     <form class="header-top__form">
                         <input type=" text" name="text" class="header-top__search" placeholder="Текс поиска">
                         <input type="submit" name="submit" class="header-top__submit" value="Найти">
                     </form>
                 </div>
-                <div class="header-top__menu">
-                    <div class="header-top__item">
-                        <a class="header-top__link" href="#">Войти</a>
+                <div class="header-top-menu header-right">
+                    <div class="header-top-menu__item">
+                        <a class="header-top-menu__link" href="#">Войти</a>
                     </div>
-                    <div class="header-top__item">
-                        <a class="header-top__link" href="#">Сравнить</a>
+                    <div class="header-top-menu__item">
+                        <a class="header-top-menu__link" href="#">Сравнить</a>
                     </div>
-                    <div class="header-top__item">
-                        <a class="header-top__link" href="#">Корзина</a>
+                    <div class="header-top-menu__item">
+                        <a class="header-top-menu__link" href="#">Корзина</a>
                     </div>
                 </div>
             </div>
             <div class="header-low">
-                <div class="header-low__buttom">
-                    <a class="header-low__catalog" href="#">Каталог товаров</a>
+                <div class="header-low__buttom header-left">
+                    <a class="header-low__link" href="#">Каталог товаров</a>
                 </div>
-                <div class="header-low__menu">
+                <div class="header-low__menu header-right">
                     <div class="header-low__item">
-                        <a class="header-low__list" href="#">Доставка</a>
+                        <a class="header-low__link" href="#">Доставка</a>
                     </div>
                     <div class="header-low__item">
-                        <a class="header-low__list" href="#">Гарантия</a>
+                        <a class="header-low__link" href="#">Гарантия</a>
                     </div>
                     <div class="header-low__item">
-                        <a class="header-low__list" href="#">Контакты</a>
+                        <a class="header-low__link" href="#">Контакты</a>
                     </div>
                 </div>
             </div>
@@ -290,8 +291,6 @@
             display: flex;
             justify-content: space-between;
         }
-
-        .form-order-input-wrapper {}
 
         .form-order-input-label {
             display: block;

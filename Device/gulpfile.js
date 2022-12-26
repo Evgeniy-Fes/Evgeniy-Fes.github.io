@@ -9,14 +9,18 @@ const stripCssComments = require('gulp-strip-css-comments');
 const sourcemaps = require('gulp-sourcemaps');
 const concat = require('gulp-concat');
 const merge2 = require('merge2');
-const minify = require('gulp-minify');
+const uglify = require('gulp-uglify');
 
 
 // Compile Sass & Inject Into Browser
 gulp.task('style', function() {
-    return gulp.src(['src/css/**/*.scss'])
+    return gulp.src([
+        'src/css/**/*.scss'
+    ])
         .pipe(sourcemaps.init())
-        .pipe(sass().on('error', sass.logError))
+        .pipe(sass({
+            includePaths: ['node_modules']
+        }).on('error', sass.logError))
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false
@@ -76,17 +80,16 @@ gulp.task('images', () => {
 });
 
 gulp.task('js', () => {
-    // return gulp.src('src/js/**/*')
+    return gulp.src([
+        'node_modules/jquery/dist/jquery.min.js', // твой путь до жквери
+        'node_modules/slick-carousel/slick/slick.min.js', // твой путь до слика
+        'src/js/*.js' // путь до твоего файла жс в src папке
+    ])
+        .pipe(concat('main.min.js'))  // объединение всех файлов js в один файл
+        .pipe(uglify()) // минифицируем js-файлы
+        .pipe(gulp.dest('build/js')) // папка в билде для js
+        .pipe(browserSync.stream());
 
-    let vendorJs = gulp.src('src/js/vendor/*.js')
-        .pipe(concat('vendor.js'))
-        .pipe(minify());
-
-    let devJs = gulp.src('src/js/*.js')
-        .pipe(minify());
-
-    return merge2(vendorJs, devJs)
-        .pipe(gulp.dest('build/js'));
 });
 
 gulp.task('watch', function() {

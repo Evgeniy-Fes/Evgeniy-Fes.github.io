@@ -1,4 +1,5 @@
 @mixin clear-button{
+  display: block;
   background: transparent;
   border: none;
   padding: 0;
@@ -18,5 +19,37 @@
 
   &::placeholder{
     color: $color-text-main;
+  }
+}
+
+@mixin button-main($width: 100px, $line-height: 21px){
+  @include clear-button();
+
+  display: inline-block;
+  width: auto;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: $line-height;
+  vertical-align: middle;
+  text-align: center;
+  letter-spacing: 0.2em;
+  font-family: $font-raleway;
+  color: $color-text-main;
+  padding: 0 10px;
+  text-transform: uppercase;
+  min-width: $width;
+  position: relative;
+
+  &::before{
+    content: '';
+    display: block;
+    height: 8px;
+    width: 100%;
+    background-color: $color-bg;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
   }
 }

@@ -3,101 +3,19 @@
 <body>
     <div class="container">
         @@include('./templates/header.html')
-        
+
         <main class="main-index">
 
-            <div class="slick-carousel">
-                <div>your content</div>
-                <div>your content</div>
-                <div>your content</div>
-            </div>
-
             @@include('./templates/slider.html')
-            
-            <section>
-                <ul class="category-list">
-                    <li class="category-item">
-                        <img src="" alt="Виртуальная реальность">
-                        <p>Виртуальная реальность</p>
-                    </li>
-                    <li class="category-item">
-                        <img src="" alt="Моноподы для селфи">
-                        <p>Моноподы для селфи</p>
-                    </li>
-                    <li class="category-item">
-                        <img src="" alt="Экшн-камеры">
-                        <p>Экшн-камеры</p>
-                    </li>
-                    <li class="category-item">
-                        <img src="" alt="Фитнес-браслеты">
-                        <p>Фитнес-браслеты</p>
-                    </li>
-                    <li class="category-item">
-                        <img src="" alt="Умные часы">
-                        <p>Умные часы</p>
-                    </li>
-                    <li class="category-item">
-                        <img src="" alt="Квадрокоптеры">
-                        <p>Квадрокоптеры</p>
-                    </li>
-                </ul>
-            </section>
-            <section class="delivery">
-                <ul class="delivery-list">
-                    <li class="delivery-item">Доставка</li>
-                    <li class="delivery-item">Гарантия</li>
-                    <li class="delivery-item">Кредит</li>
-                </ul>
-                <h3 class="delivery-main">Доставка</h3>
-                <p class="delivery-text">Мы с удовольствием доставим ваш товар прямо
-                    <br>к вашему подъезду совершенно бесплатно! Ведь
-                    <br>мы неплохо заработаем, поднимая его на ваш этаж.
-                </p>
-            </section>
-            <div class="delivery-rare">
-                <p class="delivery-rare-text">Доставим редкий товар под заказ</p>
-            </div>
-            <section class="about">
-                <h2 class="about-main">О нас</h2>
-                <p class="about-text">Огромный выбор гаджетов не оставит равнодушным<br>гика, который есть в каждом из
-                    нас.
-                </p>
-                <p class="about-tex class">Мы можем доставить ваш товар в самые отдалённые<br>уголки России
-                    транспортными
-                    компаниями:</p>
-                <ul class="about-list">
-                    <li class="about-item">Меловые линии</li>
-                    <li class="about-item">СДИК</li>
-                    <li class="about-item">ТоксБерри</li>
-                </ul>
-                <a class="about-nav" href="">Подробнее о нас</a>
-            </section>
-            <section class="contacts">
-                <h2 class="cotacts-main">Контакты</h2>
-                <p class="cotacts-text">Вы можете забрать товар сами, заехав в наш офис.<br>Заодно сможете проверить
-                    работоспособность
-                    покупки.</p>
-                <h4 class="cotacts-title">Интернет-магазин "Девайс"</h4>
-                <p class="cotacts-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
-                <a class="cotacts-nav" href="">+7 (812) 812-12-12</a>
-                <h4 class="cotacts-title">Время работы</h4>
-                <p class="cotacts-text">пн—пт: с 10:00 до 22:00 <br> сб—вс: с 10:00 до 19:00</p>
-                <a class="cotacts-nav" href="">Напишите нам</a>
-            </section>
-            <section class="subscription">
-                <h3 class="subscription-main">Подпишитесь<br>на рассылку</h3>
-                <p class="subscription-text">Еженедельный дайджест с обзорами новинок,<br>длительными тест-драйвами,
-                    распаковками, а также
-                    акции,
-                    <br>спецпредложения и вот это вот всё.
-                </p>
-                <form class="subscription-form">
-                    <input type="text" placeholder="Ваш e-mail" name="mail" required>
-                    <input type="submit" value="Подписаться">
-                </form>
-                <p class="subscription-text">Это бесплатно</p>
-            </section>
+
+            @@include('./templates/category-list.html')
+
+            @@include('./templates/delivery.html')
+
+            @@include('./templates/about.html')
+
         </main>
+        
         <footer class="footer-main">
             <ul class="footer-list">
                 <li class="footer-item">Санкт-Петербург, набережная<br>реки Карповки, 5, литера П.</li>
@@ -318,5 +236,5 @@
             width: 33%;
         }
     </style>
-    
-@@include('./templates/footer.html')
+
+    @@include('./templates/footer.html')

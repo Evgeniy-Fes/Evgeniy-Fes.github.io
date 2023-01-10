@@ -1,6 +1,6 @@
-$(()=>{
+$(() => {
   $('.slick-carousel').slick({
-    dots: true,
     arrows: true,
+    dots: true,
   });
 })

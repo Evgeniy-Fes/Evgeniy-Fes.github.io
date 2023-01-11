@@ -9,6 +9,9 @@
         .delivery-list {
             position: relative;
             padding-top: 73px;
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
         }
 
         .delivery-list::before {
@@ -22,44 +25,43 @@
         }
 
         .delivery-item {
-            width: 160px;
-            height: 20px;
-            font-family: $font-raleway;
-            font-style: normal;
-            font-weight: 800;
-            font-size: 18px;
-            line-height: 21px;
-            text-align: center;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            color: $color-text-main;
-            margin-bottom: 55px;
+            width: 100%;
         }
 
-        .delivery-nav:hover {
-            color: $color-bg;
-            background: $color-text-main;
-        }
+        .delivery-nav{
+            @include button-main(160px, 40px);
 
-        .delivery-nav::before {
-            content: "";
-            position: absolute;
-            z-index: -1;
-            width: 160px;
-            height: 8px;
-            left: 0px;
-            background-color: $color-bg;
-            margin-top: 6px;
+            height: 40px;
+
+            &:hover,
+            &.active {
+                color: $color-bg;
+                background: $color-text-main;
+                width: 100%;
+                text-align: left;
+                padding-left: 15px;
+            }
         }
     }
 
     .delivery-right {
-        display: flex;
         width: 880px;
         padding-left: 116px;
 
+        &__tab-content{
+            display: none;
+
+            &.active{
+                display: block;
+            }
+        }
+
         .delivery-menu {
             width: 680px;
+
+            &__wrapper{
+                display: flex;
+            }
         }
 
         .delivery-main {

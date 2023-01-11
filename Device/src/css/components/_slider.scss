@@ -1,28 +1,67 @@
 .slider {
-
+    background: linear-gradient(to bottom, $color-bg 126px, transparent 126px);
     .slick-carousel {
         max-width: 100%;
 
         .carousel-card {
             display: flex;
             gap: 40px;
+
+            &__button{
+                @include button-main(210px);
+            }
         }
     }
 }
 
-.background {
-    position: absolute;
-    width: 1160px;
-    height: 154px;
-    background-color: $color-bg;
+.slider-decription{
+    &__nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__dots{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    &__dot{
+        width: 12px;
+        height: 12px;
+        border-radius: 100%;
+        border: 2px solid $color-text-main;
+        cursor: pointer;
+
+        &.active{
+            background-color: $color-text-main;
+        }
+    }
 }
 
 .foto-wrapper {
     max-width: 560px;
     max-height: 560px;
+    position: relative;
 
     .foto-description {
         object-fit: cover;
+    }
+
+    &-arrow{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: red;
+        font-size: 70px;
+        cursor: pointer;
+
+        &__left{
+            left: 0;
+        }
+        &__right{
+            right: 0;
+        }
     }
 }
 

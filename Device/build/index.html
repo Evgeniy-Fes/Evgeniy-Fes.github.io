@@ -61,11 +61,12 @@
         <main class="main-index">
 
             <div class="slider">
-    <div class="background"></div>
     <div class="slick-carousel">
         <div class="carousel-card">
             <div class="foto-wrapper">
+                <div class="foto-wrapper-arrow foto-wrapper-arrow__left"> &#8249; </div>
                 <img class="foto-description" src="images/slider-1.png" alt="Квадрокоптер">
+                <div class="foto-wrapper-arrow foto-wrapper-arrow__right"> &#8250; </div>
             </div>
             <div class="slick-carousel-description">
                 <p class="description-number">01</p>
@@ -73,7 +74,10 @@
                 <p class="description-text">Этот обычный, на первый взгляд, квадрокоптер оснащен<br>
                     мощным лазером, замаскированным под стандартную камеру.
                 </p>
-                <a class="description-nav" href="#">Подробнее</a>
+                <div class="slider-decription__nav">
+                    <a class="carousel-card__button" href="#">Подробнее</a>
+                    <div class="slider-decription__dots"></div>
+                </div>
                 <div class="description-block">
                     <ul class="block">
                         <li><span class="block-unit">800 м</span></li>
@@ -88,7 +92,9 @@
         </div>
         <div class="carousel-card">
             <div class="foto-wrapper">
+                <div class="foto-wrapper-arrow foto-wrapper-arrow__left"> &#8249; </div>
                 <img class="foto-description" src="images/slider-1.png" alt="Квадрокоптер">
+                <div class="foto-wrapper-arrow foto-wrapper-arrow__right"> &#8250; </div>
             </div>
             <div class="slick-carousel-description">
                 <h3 class="description-number">02</h3>
@@ -96,7 +102,10 @@
                 <p class="description-text">Этот обычный, на первый взгляд, квадрокоптер оснащен<br>
                     мощным лазером, замаскированным под стандартную камеру.
                 </p>
-                <a class="description-nav" href="#">Подробнее</a>
+                <div class="slider-decription__nav">
+                    <a class="carousel-card__button" href="#">Подробнее</a>
+                    <div class="slider-decription__dots"></div>
+                </div>
                 <div class="description-block">
                     <ul class="block">
                         <li><span class="block-unit">800 м</span></li>
@@ -111,7 +120,9 @@
         </div>
         <div class="carousel-card">
             <div class="foto-wrapper">
+                <div class="foto-wrapper-arrow foto-wrapper-arrow__left"> &#8249; </div>
                 <img class="foto-description" src="images/slider-1.png" alt="Квадрокоптер">
+                <div class="foto-wrapper-arrow foto-wrapper-arrow__right"> &#8250; </div>
             </div>
             <div class="slick-carousel-description">
                 <h3 class="description-number">03</h3>
@@ -119,7 +130,10 @@
                 <p class="description-text">Этот обычный, на первый взгляд, квадрокоптер оснащен<br>
                     мощным лазером, замаскированным под стандартную камеру.
                 </p>
-                <a class="description-nav" href="#">Подробнее</a>
+                <div class="slider-decription__nav">
+                    <a class="carousel-card__button" href="#">Подробнее</a>
+                    <div class="slider-decription__dots"></div>
+                </div>
                 <div class="description-block">
                     <ul class="block">
                         <li><span class="block-unit">800 м</span></li>
@@ -180,26 +194,36 @@
     <div class="delivery-left">
         <ul class="delivery-list">
             <li class="delivery-item">
-                <a class="delivery-nav" href="">Доставка</a>
+                <a class="delivery-nav active" href="#delivery-info-1">Доставка</a>
             </li>
             <li class="delivery-item">
-                <a class="delivery-nav" href="">Гарантия</a>
+                <a class="delivery-nav" href="#delivery-info-2">Гарантия</a>
             </li>
             <li class="delivery-item">
-                <a class="delivery-nav" href="">Кредит</a>
+                <a class="delivery-nav" href="#delivery-info-3">Кредит</a>
             </li>
         </ul>
     </div>
     <div class="delivery-right">
-        <div class="delivery-menu">
-            <h3 class="delivery-main">Доставка</h3>
-            <p class="delivery-text">Мы с удовольствием доставим ваш товар прямо
-                <br>к вашему подъезду совершенно бесплатно! Ведь
-                <br>мы неплохо заработаем, поднимая его на ваш этаж.
-            </p>
+        <div class="delivery-right__tab-content active" id="delivery-info-1">
+            <div class="delivery-menu__wrapper">
+                <div class="delivery-menu">
+                    <h3 class="delivery-main">Доставка</h3>
+                    <p class="delivery-text">Мы с удовольствием доставим ваш товар прямо
+                        <br>к вашему подъезду совершенно бесплатно! Ведь
+                        <br>мы неплохо заработаем, поднимая его на ваш этаж.
+                    </p>
+                </div>
+                <div class="delivery-icon">
+                    <img class="img-people" src="images/people.png">
+                </div>
+            </div>
         </div>
-        <div class="delivery-icon">
-            <img class="img-people" src="images/people.png">
+        <div class="delivery-right__tab-content" id="delivery-info-2">
+            delivery-info-2
+        </div>
+        <div class="delivery-right__tab-content" id="delivery-info-3">
+            delivery-info-3
         </div>
     </div>
 </div>

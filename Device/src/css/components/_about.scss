@@ -1,6 +1,5 @@
 .about-contacts {
     display: flex;
-    padding-bottom: 40px;
 }
 
 .about {
@@ -31,7 +30,9 @@
 
         .about-item {
             padding-bottom: 19px;
-            list-style-type: circle;
+            display: flex;
+            align-items: center;
+            gap: 26px;
         }
 
         .about-item-nav {
@@ -46,15 +47,7 @@
     }
 
     .about-nav {
-        font-family: $font-raleway;
-        font-style: normal;
-        font-weight: 800;
-        font-size: 18px;
-        line-height: 21px;
-        text-align: center;
-        letter-spacing: 0.2em;
-        text-transform: uppercase;
-        color: $color-text-main
+        @include button-main(270px);
     }
 }
 
@@ -68,6 +61,7 @@
         font-size: 50px;
         line-height: 50px;
         color: #000000;
+        padding-bottom: 48px;
     }
 
     .contacts-text {
@@ -79,6 +73,16 @@
         color: $color-text-desc;
     }
 
+    .contacts-tel-nav {
+        font-family: $font-rubic;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+        text-decoration-line: underline;
+        color: $color-text-desc;
+    }
+
     .contacts-title {
         font-family: $font-rubic;
         font-style: normal;
@@ -86,5 +90,119 @@
         font-size: 24px;
         line-height: 30px;
         color: $color-text-desc;
+        padding-top: 30px;
+        padding-bottom: 15px;
+    }
+
+    .contacts-nav {
+        @include button-main(259px);
+    }
+}
+
+.subscription {
+    margin-top: 80px;
+    margin-left: -140px;
+    width: 1440px;
+    height: 421px;
+    background: #F0F0F0;
+
+    .subscription-up {
+        display: flex;
+
+        .subscription-main {
+            width: 50%;
+            padding-top: 64px;
+            padding-left: 147px;
+            font-family: $font-raleway;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 50px;
+            line-height: 50px;
+            color: $color-text-main;
+        }
+
+        .subscription-text {
+            width: 50%;
+            padding-top: 74px;
+            padding-right: 133px;
+            font-family: $font-rubic;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 30px;
+            color: $color-text-desc;
+        }
+    }
+
+    .subscription-down {
+        width: 1160px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding-top: 144px;
+
+        .subscription-form {
+            width: 810px;
+            height: 57px;
+            display: flex;
+
+            &__input {
+                @include clear-input;
+
+                width: 557px;
+                padding-bottom: 24px;
+                font-family: $font-rubic;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 30px;
+                color: $color-text-desc;
+                opacity: 0.5;
+                border-bottom: 3px solid #CECECE;
+
+                &-wrapper {
+                    width: 100%;
+                    position: relative;
+                }
+            }
+
+            &__submit {
+                @include clear-button;
+
+                font-family: $font-raleway;
+                font-style: normal;
+                font-weight: 800;
+                font-size: 18px;
+                line-height: 21px;
+                letter-spacing: 0.2em;
+                text-transform: uppercase;
+                color: $color-text-main;
+                border: 3px solid #CECECE;
+            }
+
+        }
+
+        .subscription-wrapper-okey {
+            display: flex;
+            padding-bottom: 15px;
+
+            .img-okey {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-right: 16.5px;
+            }
+
+            .subscription-text-okey {
+                font-family: $font-rubic;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 30px;
+                color: $color-text-desc;
+            }
+        }
+
     }
 }

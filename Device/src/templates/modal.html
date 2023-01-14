@@ -1,0 +1,53 @@
+<div class="open-modal submit-button">Открыть модалку</div>
+
+    <div class="modal">
+        <div class="modal-bg modal-close"></div>
+        <div class="modal-body">
+            <form action="" class="form-order">
+                <div class="form-order-row form-order-row-top">
+                    <h2 class="form-order-title">Доставка под заказ</h2>
+                    <div class="modal-close">X</div>
+                </div>
+                <div class="form-order-row">
+                    <div class="form-order-input-wrapper col-50">
+                        <label for="name" class="form-order-input-label">Ваше имя:</label>
+                        <input type="text" name="name" placeholder="Введите имя" class="form-order-input">
+                    </div>
+                    <div class="form-order-input-wrapper col-50">
+                        <label for="email" class="form-order-input-label">Ваш e-mail:</label>
+                        <input type="text" name="email" placeholder="Введите email" class="form-order-input">
+                    </div>
+                </div>
+                <div class="form-order-row">
+                    <div class="form-order-input-wrapper col-66">
+                        <label for="delivery-text" class="form-order-input-label">Что нужно привезти:</label>
+                        <input type="text" name="delivery-text" placeholder="В свободной форме"
+                            class="form-order-input">
+                    </div>
+                    <div class="form-count-wrapper col-33">
+                        <label for="count" class="form-order-input-label">Количество:</label>
+                        <div class="form-count">
+                            <div class="form-count__item form-count__item_minus">-</div>
+                            <input class="form-count__item form-order-input form-count__item_value" type="text"
+                                value="0" name="count" />
+                            <div class="form-count__item form-count__item_plus">+</div>
+                      
+                <div class="form-order-row">
+                    <button type="submit" class="submit-button form-order-submit">Отправить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.open-modal').addEventListener('click', function () {
+            const modal = document.querySelector('.modal')
+            modal.classList.add('active')
+        })
+        document.addEventListener("click", function (e) {
+            if (e.target.classList.contains("modal-close")) {
+                const modal = document.querySelector('.modal')
+                modal.classList.remove('active')
+            }
+        })
+    </script>

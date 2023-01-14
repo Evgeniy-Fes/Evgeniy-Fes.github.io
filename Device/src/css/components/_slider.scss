@@ -1,159 +1,143 @@
 .slider {
     background: linear-gradient(to bottom, $color-bg 126px, transparent 126px);
-    .slick-carousel {
-        max-width: 100%;
 
-        .carousel-card {
-            display: flex;
-            gap: 40px;
-
-            &__button{
-                @include button-main(210px);
-            }
-        }
+    .slider-galery {
+        display: flex;
+        gap: 40px;
     }
 }
 
-.slider-decription{
-    &__nav{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    &__dots{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-    }
-    &__dot{
-        width: 12px;
-        height: 12px;
-        border-radius: 100%;
-        border: 2px solid $color-text-main;
-        cursor: pointer;
+.slick-img {
+    max-width: 100%;
+    width: 560px;
 
-        &.active{
-            background-color: $color-text-main;
-        }
-    }
-}
-
-.foto-wrapper {
-    max-width: 560px;
-    max-height: 560px;
-    position: relative;
-
-    .foto-description {
-        object-fit: cover;
-    }
-
-    &-arrow{
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        color: red;
-        font-size: 70px;
-        cursor: pointer;
-
-        &__left{
-            left: 0;
-        }
-        &__right{
-            right: 0;
-        }
-    }
-}
-
-
-.slick-carousel-description {
-    max-width: 560px;
-    max-height: 560px;
-
-    .description-number {
-        height: 135px;
-        display: flex;
-        justify-content: end;
-        align-items: center;  
-
-        font-family: $font-rubic;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 180px;
-        line-height: 30px;
-        color: $color-number;
-        padding-right: 49px;
-    }
-
-    .description-main {
-        font-family: $font-raleway;
-        font-style: normal;
-        font-weight: 800;
-        font-size: 50px;
-        line-height: 50px;
-        color: $color-text-main;
-        padding-right: 5px;
-        padding-bottom: 29px;
-    }
-
-    .description-text {
-        font-family: $font-rubic;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 30px;
-        color: $color-text-desc;
-        padding-bottom: 61px;
-    }
-
-    .description-nav {
+    .foto-wrapper {
+        max-width: 560px;
+        max-height: 560px;
         position: relative;
-        padding-left: 25px;
-        font-family: $font-raleway;
-        font-style: normal;
-        font-weight: 800;
-        font-size: 18px;
-        line-height: 21px;
-        text-align: center;
-        letter-spacing: 0.2em;
-        text-transform: uppercase;
-        color: $color-text-main;
-    }
 
-    .description-nav::after {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        width: 220px;
-        height: 8px;
-        top: 6px;
-        right: -33px;
-        background-color: $color-bg;
-    }
+        .foto-description {
+            object-fit: cover;
+        }
 
-    .description-block {
-        display: flex;
-        padding-top: 59px;
+        &-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: black;
+            font-size: 70px;
+            cursor: pointer;
 
-        .block {
-            &-unit {
-                font-family: $font-rubic;
-                font-style: normal;
-                font-weight: 400;
-                font-size: 36px;
-                line-height: 30px;
-                color: $color-text-main;
-                padding-right: 58px;
-                padding-bottom: 12px;
+            &__left {
+                left: 0;
             }
 
-            &-text {
-                font-family: $font-rubic;
-                font-style: normal;
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 30px;
-                color: $color-text-desc;
+            &__right {
+                right: 0;
+            }
+        }
+    }
+}
+
+.slick-menu {
+    max-width: 100%;
+    width: 560px;
+
+    &__button {
+        @include button-main(210px);
+    }
+
+    .slider-decription {
+        &__nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__dots {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        &__dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 100%;
+            border: 2px solid $color-text-main;
+            cursor: pointer;
+
+            &.active {
+                background-color: $color-text-main;
+            }
+        }
+    }
+
+    .slick-carousel-description {
+        max-width: 560px;
+        max-height: 560px;
+
+        .description-number {
+            height: 135px;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+
+            font-family: $font-rubic;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 180px;
+            line-height: 30px;
+            color: $color-number;
+            padding-right: 49px;
+        }
+
+        .description-main {
+            font-family: $font-raleway;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 50px;
+            line-height: 50px;
+            color: $color-text-main;
+            padding-right: 5px;
+            padding-bottom: 29px;
+        }
+
+        .description-text {
+            font-family: $font-rubic;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 30px;
+            color: $color-text-desc;
+            padding-bottom: 61px;
+        }
+
+        .description-block {
+            display: flex;
+            padding-top: 59px;
+
+            .block {
+                &-unit {
+                    font-family: $font-rubic;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 36px;
+                    line-height: 30px;
+                    color: $color-text-main;
+                    padding-right: 58px;
+                    padding-bottom: 12px;
+                }
+
+                &-text {
+                    font-family: $font-rubic;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 30px;
+                    color: $color-text-desc;
+                }
             }
         }
     }

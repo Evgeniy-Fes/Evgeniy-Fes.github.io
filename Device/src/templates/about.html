@@ -9,12 +9,15 @@
             компаниями:</p>
         <ul class="about-list">
             <li class="about-item">
+                <img class="dots-img" src="images/dots.svg">
                 <a class="about-item-nav">Меловые линии</a>
             </li>
             <li class="about-item">
+                <img class="dots-img" src="images/dots.svg">
                 <a class="about-item-nav">СДИК</a>
             </li>
             <li class="about-item">
+                <img class="dots-img" src="images/dots.svg">
                 <a class="about-item-nav">ТоксБерри</a>
             </li>
         </ul>
@@ -27,22 +30,32 @@
             покупки.</p>
         <h4 class="contacts-title">Интернет-магазин "Девайс"</h4>
         <p class="contacts-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
-        <a class="contacts-nav" href="">+7 (812) 812-12-12</a>
+        <a class="contacts-tel-nav" href="">+7 (812) 812-12-12</a>
         <h4 class="contacts-title">Время работы</h4>
         <p class="contacts-text">пн—пт: с 10:00 до 22:00 <br> сб—вс: с 10:00 до 19:00</p>
         <a class="contacts-nav" href="">Напишите нам</a>
     </div>
 </div>
 <div class="subscription">
-    <h3 class="subscription-main">Подпишитесь<br>на рассылку</h3>
-    <p class="subscription-text">Еженедельный дайджест с обзорами новинок,<br>длительными тест-драйвами,
-        распаковками, а также
-        акции,
-        <br>спецпредложения и вот это вот всё.
-    </p>
-    <form class="subscription-form">
-        <input type="text" placeholder="Ваш e-mail" name="mail" required>
-        <input type="submit" value="Подписаться">
-    </form>
-    <p class="subscription-text">Это бесплатно</p>
+    <div class="subscription-up">
+        <h3 class="subscription-main">Подпишитесь<br>на рассылку</h3>
+        <p class="subscription-text">Еженедельный дайджест с обзорами новинок,<br>длительными тест-драйвами,
+            распаковками, а также
+            акции,
+            <br>спецпредложения и вот это вот всё.
+        </p>
+    </div>
+    <div class="subscription-down">
+        <div class="subscription-form">
+            <div class="subscription-form__input-wrapper">
+                <input type="text" class="subscription-form__input" placeholder="Ваш e-mail" name="mail" required>
+            </div>
+            <button type="submit" class="subscription-form__submit">Подписаться</button>
+        </div>
+
+        <div class="subscription-wrapper-okey">
+            <img class="img-okey" src="images/okey.svg">
+            <p class="subscription-text-okey">Это бесплатно</p>
+        </div>
+    </div>
 </div>

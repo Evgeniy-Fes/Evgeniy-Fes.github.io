@@ -11,10 +11,22 @@
       <button type="submit" class="header-form__submit">Найти</button>
     </div>
     <div class="header-top-list header-top__list">
-      <a href="#" class="header-top-list__link login">
-        <span class="header-top-list__icon icon-login"></span>
-        Войти
-      </a>
+      @@if (auth === false) {
+        <a href="#" class="header-top-list__link login">
+            <span class="header-top-list__icon icon-login"></span>
+            Войти
+        </a>
+      }
+      @@if (auth === true) {
+        <a href="#" class="header-top-list__link">
+            <span class="header-top-list__icon icon-login"></span>
+              Коля Петухов
+        </a>
+  
+        <a href="#" class="header-top-list__link logout">
+          Выйти
+        </a>
+      }
       <a href="#" class="header-top-list__link">
         <span class="header-top-list__icon icon-compare"></span>
         Сравнить

@@ -1,65 +1,14 @@
-<!DOCTYPE html>
-<html lang="ru">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/catalog.css">
-    <title>Device</title>
-</head>
+@@include('./templates/head.html')
 
 <body>
     <div class="container">
-        <header class="header">
-            <div class="header-top">
-                <div class="header-top__find">
-                    <form class="header-top__form">
-                        <input type=" text" name="text" class="header-top__search" placeholder="Текс поиска">
-                        <input type="submit" name="submit" class="header-top__submit" value="Найти">
-                    </form>
-                </div>
-                <div class="header-top__menu">
-                    <div class="header-top__item">
-                        <a class="header-top__link" href="#">Войти</a>
-                    </div>
-                    <div class="header-top__item">
-                        <a class="header-top__link" href="#">Сравнить</a>
-                    </div>
-                    <div class="header-top__item">
-                        <a class="header-top__link" href="#">Корзина</a>
-                    </div>
-                </div>
-            </div>
-            <div class="header-low">
-                <div class="header-low__buttom">
-                    <a class="header-low__catalog" href="#">Каталог товаров</a>
-                </div>
-                <div class="header-low__menu">
-                    <div class="header-low__item">
-                        <a class="header-low__link" href="#">Доставка</a>
-                    </div>
-                    <div class="header-low__item">
-                        <a class="header-low__link" href="#">Гарантия</a>
-                    </div>
-                    <div class="header-low__item">
-                        <a class="header-low__link" href="#">Контакты</a>
-                    </div>
-                </div>
-            </div>
-        </header>
 
-        <footer class="footer-main">
-            <ul class="footer-list">
-                <li class="footer-item">Санкт-Петербург, набережная<br>реки Карповки, 5, литера П.</li>
-                <li class="footer-item">Доставка</li>
-                <li class="footer-item">Гарантия</li>
-                <li class="footer-item">Контакты</li>
-                <li class="footer-item">
-                    <a class="footer-nav" href="#">Тел.: +7 (812) 812-12-12</a>
-                </li>
-            </ul>
-        </footer>
+        @@include('./templates/header.html', {
+            "auth": true
+        })
+
     </div>
 
-   
+    @@include('./templates/footer.html')
+
+</body>

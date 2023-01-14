@@ -3,7 +3,9 @@
 <body>
     <div class="container">
 
-        @@include('./templates/header.html')
+        @@include('./templates/header.html', {
+            "auth": false
+        })
 
         @@include('./templates/slider.html')
 
@@ -11,11 +13,9 @@
 
         @@include('./templates/delivery.html')
 
-        @@include('./templates/about.html')
-
-
     </div>
 
+    @@include('./templates/about.html')
     @@include('./templates/footer.html')
 
 </body>

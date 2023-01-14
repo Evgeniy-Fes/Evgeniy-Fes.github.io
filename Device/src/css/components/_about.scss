@@ -22,17 +22,19 @@
         font-size: 18px;
         line-height: 30px;
         color: $color-text-desc;
-        padding-bottom: 30px;
     }
-
+    
     .about-list {
         padding-bottom: 21px;
 
         .about-item {
-            padding-bottom: 19px;
             display: flex;
             align-items: center;
             gap: 26px;
+
+            &:not(:last-child){
+                padding-bottom: 19px;
+            }
         }
 
         .about-item-nav {
@@ -53,6 +55,12 @@
 
 .contacts {
     width: 50%;
+
+    &-block{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
 
     .contacts-main {
         font-family: $font-raleway;
@@ -90,8 +98,7 @@
         font-size: 24px;
         line-height: 30px;
         color: $color-text-desc;
-        padding-top: 30px;
-        padding-bottom: 15px;
+        margin-bottom: 15px;
     }
 
     .contacts-nav {
@@ -101,10 +108,9 @@
 
 .subscription {
     margin-top: 80px;
-    margin-left: -140px;
-    width: 1440px;
-    height: 421px;
+    width: 100%;
     background: #F0F0F0;
+    padding-bottom: 56px;
 
     .subscription-up {
         display: flex;
@@ -151,19 +157,24 @@
                 @include clear-input;
 
                 width: 557px;
-                padding-bottom: 24px;
                 font-family: $font-rubic;
                 font-style: normal;
                 font-weight: 400;
                 font-size: 18px;
                 line-height: 30px;
                 color: $color-text-desc;
-                opacity: 0.5;
                 border-bottom: 3px solid #CECECE;
+                height: 100%;
+                padding: 0 16px;
 
                 &-wrapper {
                     width: 100%;
                     position: relative;
+                }
+
+                &::placeholder{
+                    opacity: 0.5;
+                    color: $color-text-desc;
                 }
             }
 
@@ -179,6 +190,7 @@
                 text-transform: uppercase;
                 color: $color-text-main;
                 border: 3px solid #CECECE;
+                height: 100%;
             }
 
         }

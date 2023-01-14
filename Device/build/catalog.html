@@ -2,64 +2,124 @@
 <html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/catalog.css">
+    <link rel="stylesheet" href="css/index.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <script type="text/javascript" src="js/main.min.js"></script>
+
     <title>Device</title>
 </head>
 
 <body>
     <div class="container">
-        <header class="header">
-            <div class="header-top">
-                <div class="header-top__find">
-                    <form class="header-top__form">
-                        <input type=" text" name="text" class="header-top__search" placeholder="Текс поиска">
-                        <input type="submit" name="submit" class="header-top__submit" value="Найти">
-                    </form>
-                </div>
-                <div class="header-top__menu">
-                    <div class="header-top__item">
-                        <a class="header-top__link" href="#">Войти</a>
-                    </div>
-                    <div class="header-top__item">
-                        <a class="header-top__link" href="#">Сравнить</a>
-                    </div>
-                    <div class="header-top__item">
-                        <a class="header-top__link" href="#">Корзина</a>
-                    </div>
-                </div>
-            </div>
-            <div class="header-low">
-                <div class="header-low__buttom">
-                    <a class="header-low__catalog" href="#">Каталог товаров</a>
-                </div>
-                <div class="header-low__menu">
-                    <div class="header-low__item">
-                        <a class="header-low__link" href="#">Доставка</a>
-                    </div>
-                    <div class="header-low__item">
-                        <a class="header-low__link" href="#">Гарантия</a>
-                    </div>
-                    <div class="header-low__item">
-                        <a class="header-low__link" href="#">Контакты</a>
-                    </div>
-                </div>
-            </div>
-        </header>
 
-        <footer class="footer-main">
-            <ul class="footer-list">
-                <li class="footer-item">Санкт-Петербург, набережная<br>реки Карповки, 5, литера П.</li>
-                <li class="footer-item">Доставка</li>
-                <li class="footer-item">Гарантия</li>
-                <li class="footer-item">Контакты</li>
-                <li class="footer-item">
-                    <a class="footer-nav" href="#">Тел.: +7 (812) 812-12-12</a>
-                </li>
-            </ul>
-        </footer>
+        <header class="header">
+  <a href="/" class="header-logo">
+    <img src="images/logo.svg" alt="logo">
+  </a>
+  <div class="header-top">
+    <div class="header-form">
+      <div class="header-form__input-wrapper">
+        <input type="text" class="header-form__input" placeholder="Текст поиска">
+        <span class="header-form__input-icon icon-search"></span>
+      </div>
+      <button type="submit" class="header-form__submit">Найти</button>
+    </div>
+    <div class="header-top-list header-top__list">
+      
+      
+        <a href="#" class="header-top-list__link">
+            <span class="header-top-list__icon icon-login"></span>
+              Коля Петухов
+        </a>
+  
+        <a href="#" class="header-top-list__link logout">
+          Выйти
+        </a>
+      
+      <a href="#" class="header-top-list__link">
+        <span class="header-top-list__icon icon-compare"></span>
+        Сравнить
+      </a>
+      <a href="#" class="header-top-list__link">
+        <span class="header-top-list__icon icon-cart"></span>
+        Корзина
+      </a>
+    </div>
+  </div>
+  <div class="header-bottom">
+    <div class="header-bottom-catalog header-bottom-button">
+      Каталог товаров
+      <span class="header-bottom-catalog__icon">
+        <span class="icon-plus"></span>
+      </span>
+    </div>
+    <div class="header-bottom-list">
+      <a href="#" class="header-bottom-button header-bottom-list__link">Доставка</a>
+      <a href="#" class="header-bottom-button header-bottom-list__link">Гарантия</a>
+      <a href="#" class="header-bottom-button header-bottom-list__link">Контакты</a>
+    </div>
+  </div>
+</header>
+
     </div>
 
-   
+    <footer class="footer-main">
+    <div class="footer-wrapper">
+        <a href="/" class="footer-logo">
+            <img src="images/logo-footer.svg" alt="logo">
+        </a>
+        <div class="footer-up">
+            <div class="footer-text">Санкт-Петербург, набережная<br>реки Карповки, 5, литера П.</div>
+            <div class="footer-list">
+                <div class="footer-nav">
+                    <a class="nav-element" href="#">Доставка</a>
+                </div>
+                <div class="footer-nav">
+                    <a class="nav-element" href="#">Гарантия</a>
+                </div>
+                <div class="footer-nav">
+                    <a class="nav-element" href="#">Контакты</a>
+                </div>
+            </div>
+            <div class="footer-text">
+                <a class="footer-nav-text" href="#">Тел.: +7 (812) 812-12-12</a>
+            </div>
+        </div>
+        <div class="footer-down">
+            <div class="footer-down-img">
+                <a href="#" class="footer-line-img">
+                    <img src="images/line.svg">
+                </a>
+            </div>
+            <div class="footer-list">
+                <div class="footer-nav-item">
+                    <a href="#" class="footer-img">
+                        <img src="images/facebook.svg" alt="facebook">
+                    </a>
+                </div>
+                <div class="footer-nav-item">
+                    <a href="#" class="footer-img">
+                        <img src="images/instagram.svg" alt="instagram">
+                    </a>
+                </div>
+                <div class="footer-nav-item">
+                    <a href="#" class="footer-img">
+                        <img src="images/twitter.svg" alt="twitter">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-down-img">
+                <a href="#" class="footer-img-text">
+                    <img src="images/htmlacademy.svg" alt="html">
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>

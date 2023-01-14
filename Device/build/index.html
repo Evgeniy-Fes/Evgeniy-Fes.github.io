@@ -30,10 +30,13 @@
       <button type="submit" class="header-form__submit">Найти</button>
     </div>
     <div class="header-top-list header-top__list">
-      <a href="#" class="header-top-list__link login">
-        <span class="header-top-list__icon icon-login"></span>
-        Войти
-      </a>
+      
+        <a href="#" class="header-top-list__link login">
+            <span class="header-top-list__icon icon-login"></span>
+            Войти
+        </a>
+      
+      
       <a href="#" class="header-top-list__link">
         <span class="header-top-list__icon icon-compare"></span>
         Сравнить
@@ -63,25 +66,13 @@
     <div class="slider-galery">
         <div class="slick-img">
             <div class="carousel-card">
-                <div class="foto-wrapper">
-                    <div class="foto-wrapper-arrow foto-wrapper-arrow__left"> &#8249; </div>
                     <img class="foto-description" src="images/slider-1.svg" alt="Квадрокоптер">
-                    <div class="foto-wrapper-arrow foto-wrapper-arrow__right"> &#8250; </div>
-                </div>
             </div>
             <div class="carousel-card">
-                <div class="foto-wrapper">
-                    <div class="foto-wrapper-arrow foto-wrapper-arrow__left"> &#8249; </div>
                     <img class="foto-description" src="images/slider-1.svg" alt="Квадрокоптер">
-                    <div class="foto-wrapper-arrow foto-wrapper-arrow__right"> &#8250; </div>
-                </div>
             </div>
             <div class="carousel-card">
-                <div class="foto-wrapper">
-                    <div class="foto-wrapper-arrow foto-wrapper-arrow__left"> &#8249; </div>
                     <img class="foto-description" src="images/slider-1.svg" alt="Квадрокоптер">
-                    <div class="foto-wrapper-arrow foto-wrapper-arrow__right"> &#8250; </div>
-                </div>
             </div>
         </div>
         <div class="slick-menu">
@@ -93,7 +84,6 @@
                 </p>
                 <div class="slider-decription__nav">
                     <a class="slick-menu__button" href="#">Подробнее</a>
-                    <div class="slider-decription__dots"></div>
                 </div>
                 <div class="description-block">
                     <ul class="block">
@@ -114,7 +104,6 @@
                 </p>
                 <div class="slider-decription__nav">
                     <a class="slick-menu__button" href="#">Подробнее</a>
-                    <div class="slider-decription__dots"></div>
                 </div>
                 <div class="description-block">
                     <ul class="block">
@@ -135,7 +124,6 @@
                 </p>
                 <div class="slider-decription__nav">
                     <a class="slick-menu__button" href="#">Подробнее</a>
-                    <div class="slider-decription__dots"></div>
                 </div>
                 <div class="description-block">
                     <ul class="block">
@@ -229,8 +217,8 @@
             delivery-info-3
         </div>
     </div>
+    <div class="delivery-bg"></div>
 </div>
-<div class="background-block"></div>
 <div class="delivery-rare">
     <div class="rare-car">
         <img class="img-car" src="images/car.svg">
@@ -243,71 +231,100 @@
     </div>
 </div>
 
-        <div class="about-contacts">
-    <div class="about">
-        <h2 class="about-main">О нас</h2>
-        <p class="about-text">Огромный выбор гаджетов не оставит равнодушным<br>гика, который есть в каждом из
-            нас.
-        </p>
-        <p class="about-text">Мы можем доставить ваш товар в самые отдалённые<br>уголки России
-            транспортными
-            компаниями:</p>
-        <ul class="about-list">
-            <li class="about-item">
-                <img class="dots-img" src="images/dots.svg">
-                <a class="about-item-nav">Меловые линии</a>
-            </li>
-            <li class="about-item">
-                <img class="dots-img" src="images/dots.svg">
-                <a class="about-item-nav">СДИК</a>
-            </li>
-            <li class="about-item">
-                <img class="dots-img" src="images/dots.svg">
-                <a class="about-item-nav">ТоксБерри</a>
-            </li>
-        </ul>
-        <a class="about-nav" href="">Подробнее о нас</a>
     </div>
-    <div class="contacts">
-        <h2 class="contacts-main">Контакты</h2>
-        <p class="contacts-text">Вы можете забрать товар сами, заехав в наш офис.<br>Заодно сможете проверить
-            работоспособность
-            покупки.</p>
-        <h4 class="contacts-title">Интернет-магазин "Девайс"</h4>
-        <p class="contacts-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
-        <a class="contacts-tel-nav" href="">+7 (812) 812-12-12</a>
-        <h4 class="contacts-title">Время работы</h4>
-        <p class="contacts-text">пн—пт: с 10:00 до 22:00 <br> сб—вс: с 10:00 до 19:00</p>
-        <a class="contacts-nav" href="">Напишите нам</a>
-    </div>
-</div>
-<div class="subscription">
-    <div class="subscription-up">
-        <h3 class="subscription-main">Подпишитесь<br>на рассылку</h3>
-        <p class="subscription-text">Еженедельный дайджест с обзорами новинок,<br>длительными тест-драйвами,
-            распаковками, а также
-            акции,
-            <br>спецпредложения и вот это вот всё.
-        </p>
-    </div>
-    <div class="subscription-down">
-        <div class="subscription-form">
-            <div class="subscription-form__input-wrapper">
-                <input type="text" class="subscription-form__input" placeholder="Ваш e-mail" name="mail" required>
+
+    <div class="container">
+    <div class="about-contacts">
+        <div class="about">
+            <h2 class="about-main">О нас</h2>
+            <div class="contacts-block">
+                <div class="contacts-row">
+                    <p class="about-text">Огромный выбор гаджетов не оставит равнодушным<br>гика, который есть в каждом из
+                        нас.
+                    </p>
+                </div>
+
+                <div class="contacts-row">
+                    <p class="about-text">Мы можем доставить ваш товар в самые отдалённые<br>уголки России
+                        транспортными
+                        компаниями:</p>
+                </div>
+
+                <div class="contacts-row">
+                    <ul class="about-list">
+                        <li class="about-item">
+                            <img class="dots-img" src="images/dots.svg">
+                            <a class="about-item-nav">Меловые линии</a>
+                        </li>
+                        <li class="about-item">
+                            <img class="dots-img" src="images/dots.svg">
+                            <a class="about-item-nav">СДИК</a>
+                        </li>
+                        <li class="about-item">
+                            <img class="dots-img" src="images/dots.svg">
+                            <a class="about-item-nav">ТоксБерри</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="contacts-row">
+                    <a class="about-nav" href="">Подробнее о нас</a>
+                </div>
             </div>
-            <button type="submit" class="subscription-form__submit">Подписаться</button>
         </div>
+        <div class="contacts">
+            <h2 class="contacts-main">Контакты</h2>
+            <div class="contacts-block">
+                <div class="contacts-row">
+                    <p class="contacts-text">Вы можете забрать товар сами, заехав в наш офис.<br>Заодно сможете проверить
+                        работоспособность
+                        покупки.</p>
+                </div>
 
-        <div class="subscription-wrapper-okey">
-            <img class="img-okey" src="images/okey.svg">
-            <p class="subscription-text-okey">Это бесплатно</p>
+                <div class="contacts-row">
+                    <h4 class="contacts-title">Интернет-магазин "Девайс"</h4>
+                    <p class="contacts-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
+                    <a class="contacts-tel-nav" href="tel:+78128121212">+7 (812) 812-12-12</a>
+                </div>
+
+                <div class="contacts-row">
+                    <h4 class="contacts-title">Время работы</h4>
+                    <p class="contacts-text">пн—пт: с 10:00 до 22:00 <br> сб—вс: с 10:00 до 19:00</p>
+                </div>
+
+                <div class="contacts-row">
+                    <a class="contacts-nav" href="">Напишите нам</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
+<div class="subscription">
+    <div class="container">
+        <div class="subscription-up">
+            <h3 class="subscription-main">Подпишитесь<br>на рассылку</h3>
+            <p class="subscription-text">Еженедельный дайджест с обзорами новинок,<br>длительными тест-драйвами,
+                распаковками, а также
+                акции,
+                <br>спецпредложения и вот это вот всё.
+            </p>
+        </div>
+        <div class="subscription-down">
+            <div class="subscription-form">
+                <div class="subscription-form__input-wrapper">
+                    <input type="text" class="subscription-form__input" placeholder="Ваш e-mail" name="mail" required>
+                </div>
+                <button type="submit" class="subscription-form__submit">Подписаться</button>
+            </div>
 
+            <div class="subscription-wrapper-okey">
+                <img class="img-okey" src="images/okey.svg">
+                <p class="subscription-text-okey">Это бесплатно</p>
+            </div>
+        </div>
     </div>
-
+</div>
     <footer class="footer-main">
     <div class="footer-wrapper">
         <a href="/" class="footer-logo">

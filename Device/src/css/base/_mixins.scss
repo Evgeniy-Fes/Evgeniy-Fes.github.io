@@ -22,7 +22,7 @@
   }
 }
 
-@mixin button-main($width: 100px, $line-height: 21px){
+@mixin button-main($width: 100px, $line-height: 40px){
   @include clear-button();
 
   display: inline-block;

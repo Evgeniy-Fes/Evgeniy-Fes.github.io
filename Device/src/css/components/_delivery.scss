@@ -13,99 +13,99 @@
         left: calc(-1*((100vw - 100%) / 2));
         top: 102px;
     }
-    
+}
 
-    .delivery-left {
-        width: 280px;
+.delivery-left {
+    width: 280px;
 
-        .delivery-list {
-            position: relative;
-            padding-top: 73px;
-            display: flex;
-            flex-direction: column;
-            gap: 35px;
-        }
-
-        .delivery-list::before {
-            position: absolute;
-            content: "";
-            top: 5px;
-            right: 0px;
-            width: 7px;
-            height: 319px;
-            background-color: $color-text-main;
-        }
-
-        .delivery-item {
-            width: 100%;
-        }
-
-        .delivery-nav{
-            @include button-main(160px, 40px);
-
-            height: 40px;
-
-            &:hover,
-            &.active {
-                color: $color-bg;
-                background: $color-text-main;
-                width: 100%;
-                text-align: left;
-                padding-left: 15px;
-            }
-        }
+    &-list {
+        position: relative;
+        padding-top: 73px;
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
     }
 
-    .delivery-right {
-        width: 880px;
-        padding-left: 116px;
+    &-list::before {
+        position: absolute;
+        content: "";
+        top: 5px;
+        right: 0px;
+        width: 7px;
+        height: 319px;
+        background-color: $color-text-main;
+    }
 
-        &__tab-content{
-            display: none;
+    &-item {
+        width: 100%;
+    }
 
-            &.active{
-                display: block;
-            }
-        }
+    &-nav {
+        @include button-main(160px, 40px);
 
-        .delivery-menu {
-            width: 680px;
+        height: 40px;
 
-            &__wrapper{
-                display: flex;
-            }
-        }
-
-        .delivery-main {
-            font-family: $font-raleway;
-            font-style: normal;
-            font-weight: 800;
-            font-size: 50px;
-            line-height: 50px;
-            color: $color-text-main;
-            padding-top: 73px;
-            padding-bottom: 34px;
-        }
-
-        .delivery-text {
-            font-family: $font-rubic;
-            font-style: normal;
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 30px;
-            color: $color-text-desc;
-        }
-
-        .delivery-icon {
-            width: 200px;
-
-            .img-people {
-                padding-top: 77px;
-                padding-right: 63px;
-            }
+        &:hover,
+        &.active {
+            color: $color-bg;
+            background: $color-text-main;
+            width: 100%;
+            text-align: left;
+            padding-left: 15px;
         }
     }
 }
+
+.delivery-right {
+    width: 880px;
+    padding-left: 116px;
+
+    &__tab-content {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+
+    &-menu {
+        width: 680px;
+
+        &__wrapper {
+            display: flex;
+        }
+    }
+
+    &-main {
+        font-family: $font-raleway;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 50px;
+        line-height: 50px;
+        color: $color-text-main;
+        padding-top: 73px;
+        padding-bottom: 34px;
+    }
+
+    &-text {
+        font-family: $font-rubic;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+        color: $color-text-desc;
+    }
+
+    &-icon {
+        width: 200px;
+
+        &-img {
+            padding-top: 77px;
+            padding-right: 63px;
+        }
+    }
+}
+
 
 .delivery-rare {
     display: flex;
@@ -115,7 +115,7 @@
     margin-top: 70px;
     margin-bottom: 70px;
 
-    .rare-car {
+    &-car {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -123,7 +123,7 @@
         background-color: $color-bg;
     }
 
-    .rare-text {
+    &-text {
         width: 910px;
         height: 20px;
         font-family: $font-raleway;
@@ -138,21 +138,20 @@
         padding-top: 40px;
     }
 
-    .rare-icon {
+    &-icon {
         width: 125px;
         display: flex;
         align-items: center;
         justify-content: center;
-
-        .rare-border {
-            position: absolute;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            text-align: center;
-            background: rgba(220, 220, 220, 0.5);
-            padding-top: 13px;
-        }
     }
 
+    &-border {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        text-align: center;
+        background: rgba(220, 220, 220, 0.5);
+        padding-top: 13px;
+    }
 }

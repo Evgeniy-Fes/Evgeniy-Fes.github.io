@@ -1,10 +1,10 @@
 
 $(function(){
-  $('.delivery-nav').click(function(e){
+  $('.delivery-left-nav').on("click", function(e) {
     e.preventDefault();
 
     $('.delivery-right__tab-content.active').removeClass('active');
-    $('.delivery-nav.active').removeClass('active');
+    $('.delivery-left-nav.active').removeClass('active');
     
     $(this).addClass('active');
 
@@ -13,7 +13,7 @@ $(function(){
     $(id).addClass('active');
   })
 
-  $('.login').click(function(event){
+  $('.login').on("click", function(event){
     console.log(event)
 
     const header = $('.header');

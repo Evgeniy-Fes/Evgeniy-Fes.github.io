@@ -5,7 +5,7 @@
 .about {
     width: 50%;
 
-    .about-main {
+    &-main {
         font-family: $font-raleway;
         font-style: normal;
         font-weight: 800;
@@ -15,7 +15,7 @@
         padding-bottom: 48px;
     }
 
-    .about-text {
+    &-text {
         font-family: $font-rubic;
         font-style: normal;
         font-weight: 400;
@@ -23,32 +23,33 @@
         line-height: 30px;
         color: $color-text-desc;
     }
-    
-    .about-list {
+
+    &-list {
         padding-bottom: 21px;
+    }
 
-        .about-item {
-            display: flex;
-            align-items: center;
-            gap: 26px;
+    &-item {
+        display: flex;
+        align-items: center;
+        gap: 26px;
 
-            &:not(:last-child){
-                padding-bottom: 19px;
-            }
-        }
-
-        .about-item-nav {
-            font-family: $font-rubic;
-            font-style: normal;
-            font-weight: 700;
-            font-size: 18px;
-            line-height: 20px;
-            letter-spacing: -0.02em;
-            color: $color-text-main;
+        &:not(:last-child) {
+            padding-bottom: 19px;
         }
     }
 
-    .about-nav {
+    &-item-nav {
+        font-family: $font-rubic;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 20px;
+        letter-spacing: -0.02em;
+        color: $color-text-main;
+    }
+
+
+    &-nav {
         @include button-main(270px);
     }
 }
@@ -56,13 +57,13 @@
 .contacts {
     width: 50%;
 
-    &-block{
+    &-block {
         display: flex;
         flex-direction: column;
         gap: 30px;
     }
 
-    .contacts-main {
+    &-main {
         font-family: $font-raleway;
         font-style: normal;
         font-weight: 800;
@@ -72,7 +73,7 @@
         padding-bottom: 48px;
     }
 
-    .contacts-text {
+    &-text {
         font-family: $font-rubic;
         font-style: normal;
         font-weight: 400;
@@ -81,7 +82,7 @@
         color: $color-text-desc;
     }
 
-    .contacts-tel-nav {
+    &-tel-nav {
         font-family: $font-rubic;
         font-style: normal;
         font-weight: 400;
@@ -91,7 +92,7 @@
         color: $color-text-desc;
     }
 
-    .contacts-title {
+    &-title {
         font-family: $font-rubic;
         font-style: normal;
         font-weight: 700;
@@ -101,7 +102,7 @@
         margin-bottom: 15px;
     }
 
-    .contacts-nav {
+    &-nav {
         @include button-main(259px);
     }
 }
@@ -111,110 +112,109 @@
     width: 100%;
     background: #F0F0F0;
     padding-bottom: 56px;
+}
 
-    .subscription-up {
-        display: flex;
+.subscription-up {
+    display: flex;
 
-        .subscription-main {
-            width: 50%;
-            padding-top: 64px;
-            padding-left: 147px;
-            font-family: $font-raleway;
-            font-style: normal;
-            font-weight: 800;
-            font-size: 50px;
-            line-height: 50px;
-            color: $color-text-main;
+
+    &-main {
+        width: 50%;
+        padding-top: 64px;
+        font-family: $font-raleway;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 50px;
+        line-height: 50px;
+        color: $color-text-main;
+    }
+
+    &-text {
+        width: 50%;
+        padding-top: 74px;
+        padding-right: 133px;
+        font-family: $font-rubic;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+        color: $color-text-desc;
+    }
+}
+
+.subscription-down {
+    width: 1160px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 144px;
+}
+
+.subscription-down-form {
+    width: 810px;
+    height: 57px;
+    display: flex;
+
+    &__input {
+        @include clear-input;
+
+        width: 557px;
+        font-family: $font-rubic;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+        color: $color-text-desc;
+        border-bottom: 3px solid #CECECE;
+        height: 100%;
+        padding: 0 16px;
+
+        &-wrapper {
+            width: 100%;
+            position: relative;
         }
 
-        .subscription-text {
-            width: 50%;
-            padding-top: 74px;
-            padding-right: 133px;
-            font-family: $font-rubic;
-            font-style: normal;
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 30px;
+        &::placeholder {
+            opacity: 0.5;
             color: $color-text-desc;
         }
     }
 
-    .subscription-down {
-        width: 1160px;
-        margin: 0 auto;
+    &__submit {
+        @include clear-button;
+
+        font-family: $font-raleway;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: $color-text-main;
+        border: 3px solid #CECECE;
+        height: 100%;
+    }
+
+}
+
+.subscription-down-okey {
+    display: flex;
+    padding-bottom: 15px;
+
+    &-img {
         display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        padding-top: 144px;
+        justify-content: center;
+        align-items: center;
+        padding-right: 16.5px;
+    }
 
-        .subscription-form {
-            width: 810px;
-            height: 57px;
-            display: flex;
-
-            &__input {
-                @include clear-input;
-
-                width: 557px;
-                font-family: $font-rubic;
-                font-style: normal;
-                font-weight: 400;
-                font-size: 18px;
-                line-height: 30px;
-                color: $color-text-desc;
-                border-bottom: 3px solid #CECECE;
-                height: 100%;
-                padding: 0 16px;
-
-                &-wrapper {
-                    width: 100%;
-                    position: relative;
-                }
-
-                &::placeholder{
-                    opacity: 0.5;
-                    color: $color-text-desc;
-                }
-            }
-
-            &__submit {
-                @include clear-button;
-
-                font-family: $font-raleway;
-                font-style: normal;
-                font-weight: 800;
-                font-size: 18px;
-                line-height: 21px;
-                letter-spacing: 0.2em;
-                text-transform: uppercase;
-                color: $color-text-main;
-                border: 3px solid #CECECE;
-                height: 100%;
-            }
-
-        }
-
-        .subscription-wrapper-okey {
-            display: flex;
-            padding-bottom: 15px;
-
-            .img-okey {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding-right: 16.5px;
-            }
-
-            .subscription-text-okey {
-                font-family: $font-rubic;
-                font-style: normal;
-                font-weight: 400;
-                font-size: 18px;
-                line-height: 30px;
-                color: $color-text-desc;
-            }
-        }
-
+    &-text {
+        font-family: $font-rubic;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+        color: $color-text-desc;
     }
 }

@@ -1,0 +1,22 @@
+@import "variables";
+@import "reset";
+// @import "font-rubic";
+// @import "font-raleway";
+@import "mixins";
+// @import "icons";
+
+body {
+    font: 14px/1 $font-rubic;
+    color: $color-text-main;
+}
+
+.container {
+    max-width: 1160px;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+    outline: none;
+    color: inherit;
+}

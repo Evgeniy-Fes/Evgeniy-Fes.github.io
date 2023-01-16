@@ -2,7 +2,7 @@
   <footer class="footer">
     <div class="container">
         <a href="/" class="footer-logo">
-            <img class="footer-img" src="images/logo-footer.svg" alt="logo">
+            <img class="footer-img" src="@/assets/logo-footer.svg" alt="logo">
         </a>
         <div class="footer-up">
             <div class="footer-up-text">Санкт-Петербург, набережная<br>реки Карповки, 5, литера П.</div>
@@ -26,17 +26,17 @@
             <div class="footer-down-list">
                 <div class="footer-nav-item">
                     <a href="#" class="footer-img">
-                        <img src="images/facebook.svg" alt="facebook">
+                        <img src="@/assets/facebook.svg" alt="facebook">
                     </a>
                 </div>
                 <div class="footer-nav-item">
                     <a href="#" class="footer-img">
-                        <img src="images/instagram.svg" alt="instagram">
+                        <img src="@/assets/instagram.svg" alt="instagram">
                     </a>
                 </div>
                 <div class="footer-nav-item">
                     <a href="#" class="footer-img">
-                        <img src="images/twitter.svg" alt="twitter">
+                        <img src="@/assets/twitter.svg" alt="twitter">
                     </a>
                 </div>
             </div>

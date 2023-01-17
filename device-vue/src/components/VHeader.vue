@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header class="header container">
     <router-link to="/" class="header-logo">
       <img src="@/assets/logo.svg" alt="logo">
     </router-link>

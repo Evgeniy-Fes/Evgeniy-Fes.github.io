@@ -1,21 +1,39 @@
 <template>
-    <div class="slider">
+    <div class="slider container">
         <div class="slider-galery">
             <div class="slick-img">
-                <VueSlickCarouselImg>
-                    <div class="carousel-card">
-                        <img class="foto-description" src="@/assets/slider-1.svg" alt="Квадрокоптер">
-                    </div>
-                    <div class="carousel-card">
-                        <img class="foto-description" src="@/assets/slider-1.svg" alt="Квадрокоптер">
-                    </div>
-                    <div class="carousel-card">
-                        <img class="foto-description" src="@/assets/slider-1.svg" alt="Квадрокоптер">
-                    </div>
-                </VueSlickCarouselImg>
+                <slot>
+                    default 
+                </slot>
+                <slot name="title" :data="123">
+                    default title
+                </slot>
+                <slot name="subtitle">
+                    default subtitle
+                </slot>
+                <VueSlickCarousel ref="slickImg" :arrow="true" :dots="false">
+                    <template #default>
+                        <div class="slick-img__card">
+                            <img class="slick-img__img" src="@/assets/slider-1.svg" alt="Квадрокоптер">
+                        </div>
+                        <div class="slick-img__card">
+                            <img class="slick-img__img" src="@/assets/slider-1.svg" alt="Квадрокоптер">
+                        </div>
+                        <div class="slick-img__card">
+                            <img class="slick-img__img" src="@/assets/slider-1.svg" alt="Квадрокоптер">
+                        </div>
+                    </template>
+
+                    <template #prevArrow>
+                        <div class="slick-img__arrow slick-img__arrow_left"> &#8249; </div>
+                    </template>
+                    <template #nextArrow>
+                        <div class="slick-img__arrow slick-img__arrow_right"> &#8250; </div>
+                    </template>
+                </VueSlickCarousel>
             </div>
             <div class="slick-menu">
-                <VueSlickCarouselMenu>
+                <VueSlickCarousel ref="slickMenu" :dots="true">
                     <div class="slick-carousel-description">
                         <p class="description-number">01</p>
                         <p class="description-main">Порхает как бабочка,<br>жалит как пчела!</p>
@@ -76,24 +94,41 @@
                             </ul>
                         </div>
                     </div>
-                </VueSlickCarouselMenu>
+                    <template #customPaging>
+                        <div class="slick-menu__dot" />
+                    </template>
+                </VueSlickCarousel>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-import VueSlickCarouselImg from 'vue-slick-carousel'
-import VueSlickCarouselMenu from 'vue-slick-carousel'
+import VueSlickCarousel from 'vue-slick-carousel'
 import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 // optional style for arrows & dots
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 
 export default {
     name: 'MyComponent',
+    props: {
+        title: {
+            type: String,
+        },
+    },
+    data() {
+        return {
+            huy: 'huy'
+        }
+    },
+    mounted() {
+        this.$refs.slickImg.asNavFor = this.$refs.slickMenu
+        this.$refs.slickMenu.asNavFor = this.$refs.slickImg
+    },
+    methods: {
+    },
     components: {
-        VueSlickCarouselImg,
-        VueSlickCarouselMenu
+        VueSlickCarousel,
     },
 }
 </script>
@@ -112,42 +147,55 @@ export default {
     max-width: 100%;
     width: 560px;
 
-    .foto-wrapper {
-        max-width: 560px;
-        max-height: 560px;
-        position: relative;
-
-        .foto-description {
-            object-fit: cover;
-        }
+    
+    &__img{
+        pointer-events: none;
+    }
+    .slick-next:before,
+    .slick-prev:before{
+        display: none;
     }
 
-    .slick {
-        &-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            color: black;
-            font-size: 70px;
-            cursor: pointer;
-        }
+    &__arrow{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: black;
+        font-size: 70px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 777;
 
-        &__prev {
+        &_left{
             left: 0;
         }
-
-        &__next {
+        &_right{
             right: 0;
         }
-
     }
 }
 
 .slick-menu {
     max-width: 100%;
     width: 560px;
+    position: relative;
 
-    & .slick-menu-dots {
+    &__dot{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        font-size: 0;
+        color: transparent;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    ::v-deep .slick-dots {
         position: absolute;
         width: auto;
         right: 0;
@@ -167,19 +215,6 @@ export default {
 
             &.slick-active {
                 background-color: $color-text-main;
-            }
-
-            &>button {
-                display: flex;
-                width: 100%;
-                height: 100%;
-                padding: 0;
-                font-size: 0;
-                color: transparent;
-                border: none;
-                outline: none;
-                background-color: transparent;
-                cursor: pointer;
             }
         }
     }
@@ -221,7 +256,7 @@ export default {
         .description-number {
             height: 135px;
             display: flex;
-            justify-content: end;
+            justify-content: flex-end;
             align-items: center;
 
             font-family: $font-rubic;

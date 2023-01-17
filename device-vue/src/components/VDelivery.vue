@@ -3,57 +3,23 @@
         <div class="delivery">
             <div class="delivery-left">
                 <ul class="delivery-left-list">
-                    <li class="delivery-left-item">
-                        <a class="delivery-left-nav active" href="#delivery-info-1">Доставка</a>
-                    </li>
-                    <li class="delivery-left-item">
-                        <a class="delivery-left-nav" href="#delivery-info-2">Гарантия</a>
-                    </li>
-                    <li class="delivery-left-item">
-                        <a class="delivery-left-nav" href="#delivery-info-3">Кредит</a>
+                    <li class="delivery-left-item" v-for="(item, idx) of deliveryData" :key="idx" @click.prevent="changeCurrentTab(item)">
+                        <a :class="['delivery-left-nav', { active: item.active }]" :href="`#${item.buttonId}`">
+                            {{ item.title }}
+                        </a>
                     </li>
                 </ul>
             </div>
             <div class="delivery-right">
-                <div class="delivery-right__tab-content active" id="delivery-info-1">
+                <div :class="['delivery-right__tab-content', { active: item.active }]"
+                    v-for="(item, idx) of deliveryData" :key="idx" :id="item.buttonId">
                     <div class="delivery-right-menu__wrapper">
                         <div class="delivery-right-menu">
-                            <h3 class="delivery-right-main">Доставка</h3>
-                            <p class="delivery-right-text">Мы с удовольствием доставим ваш товар прямо
-                                <br>к вашему подъезду совершенно бесплатно! Ведь
-                                <br>мы неплохо заработаем, поднимая его на ваш этаж.
-                            </p>
+                            <h3 class="delivery-right-main">{{ item.title }}</h3>
+                            <p class="delivery-right-text" v-html="item.text" />
                         </div>
                         <div class="delivery-right-icon">
-                            <img class="delivery-right-img" src="@/assets/people.svg">
-                        </div>
-                    </div>
-                </div>
-                <div class="delivery-right__tab-content" id="delivery-info-2">
-                    <div class="delivery-right-menu__wrapper">
-                        <div class="delivery-right-menu">
-                            <h3 class="delivery-right-main">Гарантия</h3>
-                            <p class="delivery-right-text">Мы с удовольствием доставим ваш товар прямо
-                                <br>к вашему подъезду совершенно бесплатно! Ведь
-                                <br>мы неплохо заработаем, поднимая его на ваш этаж.
-                            </p>
-                        </div>
-                        <div class="delivery-right-icon">
-                            <img class="delivery-right-img" src="@/assets/people.svg">
-                        </div>
-                    </div>
-                </div>
-                <div class="delivery-right__tab-content" id="delivery-info-3">
-                    <div class="delivery-right-menu__wrapper">
-                        <div class="delivery-right-menu">
-                            <h3 class="delivery-right-main">Кредит</h3>
-                            <p class="delivery-right-text">Мы с удовольствием доставим ваш товар прямо
-                                <br>к вашему подъезду совершенно бесплатно! Ведь
-                                <br>мы неплохо заработаем, поднимая его на ваш этаж.
-                            </p>
-                        </div>
-                        <div class="delivery-right-icon">
-                            <img class="delivery-right-img" src="@/assets/people.svg">
+                            <img class="delivery-right-img" :src="getImgUrl(item.icon)">
                         </div>
                     </div>
                 </div>
@@ -75,6 +41,55 @@
 </template>
 
 <script>
+export default {
+    data() {
+        return {
+            deliveryData: [
+                {
+                    buttonId: 'delivery-info-1',
+                    title: 'Доставка',
+                    text: `Мы с удовольствием доставим ваш товар прямо
+                                <br>к вашему подъезду совершенно бесплатно! Ведь
+                                <br>мы неплохо заработаем, поднимая его на ваш этаж.`,
+                    icon: 'people.svg',
+                    active: true,
+                },
+                {
+                    buttonId: 'delivery-info-2',
+                    title: 'Гарантия',
+                    text: `Мы с удовольствием доставим ваш товар прямо
+                                <br>к вашему подъезду совершенно бесплатно! Ведь
+                                <br>мы неплохо заработаем, поднимая его на ваш этаж.`,
+                    icon: 'people.svg',
+                    active: false,
+                },
+                {
+                    buttonId: 'delivery-info-3',
+                    title: 'Кредит',
+                    text: `Мы с удовольствием доставим ваш товар прямо
+                                <br>к вашему подъезду совершенно бесплатно! Ведь
+                                <br>мы неплохо заработаем, поднимая его на ваш этаж.`,
+                    icon: 'people.svg',
+                    active: false,
+                },
+            ]
+        }
+    },
+    methods: {
+        getImgUrl(pic) {
+            return require('@/assets/'+pic)
+        },
+        changeCurrentTab(item) {
+            this.deliveryData.forEach(el => {
+                if(el.buttonId === item.buttonId) {
+                    el.active = true
+                }else{
+                    el.active = false
+                }
+            })
+        }
+    }
+}
 </script>
 
 <style scoped lang="scss">

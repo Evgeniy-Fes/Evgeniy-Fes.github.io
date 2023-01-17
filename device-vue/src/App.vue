@@ -1,14 +1,11 @@
 <template>
   <div id="app">
-    <div class="container">
     <VHeader :user="{
       name: 'Евгений Фесюк'
-    }"
-    />
-    
-    <router-view/>
+    }" />
 
-  </div>
+    <router-view />
+
     <VFooter />
   </div>
 </template>
@@ -25,8 +22,8 @@ export default {
 </script>
 
 <style lang="scss">
-.container {
-    max-width: 1160px;
-    margin: 0 auto;
-}
+// .container {
+//     max-width: 1160px;
+//     margin: 0 auto;
+// }
 </style>

@@ -81,7 +81,7 @@
                         <img class="menu-down" src="@/assets/DownArrow.svg">
                     </div>
                 </div>
-                <div class="menu-produck">
+                <div class="menu-product">
 
                 </div>
             </div>

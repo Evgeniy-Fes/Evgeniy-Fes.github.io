@@ -1,5 +1,15 @@
 <template>
   <div class="catalog">
-    <h1></h1>
+    <VMenu />
   </div>
 </template>
+
+<script>
+import VMenu from '@/components/VMenu.vue'
+export default {
+
+  components: {
+    VMenu
+  }
+}
+</script>

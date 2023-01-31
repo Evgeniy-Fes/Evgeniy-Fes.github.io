@@ -254,6 +254,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    gap: 190px;
     padding-top: 144px;
 }
 

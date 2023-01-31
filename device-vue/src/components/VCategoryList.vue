@@ -1,5 +1,5 @@
 <template>
-    <div class="category-container">
+    <div class="category container">
         <ul class="category-list">
             <li class="category-list-item">
                 <div class="category-list-wrapper">

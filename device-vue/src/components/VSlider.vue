@@ -2,15 +2,6 @@
     <div class="slider container">
         <div class="slider-galery">
             <div class="slick-img">
-                <slot>
-                    default 
-                </slot>
-                <slot name="title" :data="123">
-                    default title
-                </slot>
-                <slot name="subtitle">
-                    default subtitle
-                </slot>
                 <VueSlickCarousel ref="slickImg" :arrow="true" :dots="false">
                     <template #default>
                         <div class="slick-img__card">

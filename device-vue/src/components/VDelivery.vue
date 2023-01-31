@@ -1,9 +1,10 @@
 <template>
     <div>
-        <div class="delivery">
+        <div class="delivery container">
             <div class="delivery-left">
                 <ul class="delivery-left-list">
-                    <li class="delivery-left-item" v-for="(item, idx) of deliveryData" :key="idx" @click.prevent="changeCurrentTab(item)">
+                    <li class="delivery-left-item" v-for="(item, idx) of deliveryData" :key="idx"
+                        @click.prevent="changeCurrentTab(item)">
                         <a :class="['delivery-left-nav', { active: item.active }]" :href="`#${item.buttonId}`">
                             {{ item.title }}
                         </a>
@@ -26,7 +27,7 @@
             </div>
             <div class="delivery-bg"></div>
         </div>
-        <div class="delivery-rare">
+        <div class="delivery-rare container">
             <div class="delivery-rare-car">
                 <img class="delivery-rare-img" src="@/assets/car.svg">
             </div>
@@ -77,13 +78,13 @@ export default {
     },
     methods: {
         getImgUrl(pic) {
-            return require('@/assets/'+pic)
+            return require('@/assets/' + pic)
         },
         changeCurrentTab(item) {
             this.deliveryData.forEach(el => {
-                if(el.buttonId === item.buttonId) {
+                if (el.buttonId === item.buttonId) {
                     el.active = true
-                }else{
+                } else {
                     el.active = false
                 }
             })

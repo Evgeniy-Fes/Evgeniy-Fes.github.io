@@ -1,14 +1,6 @@
 <template>
   <div class="home">
-    <VSlider title="123" id="1">
-      text
-      <template #title="item">
-        title {{ item.data }}
-      </template>
-      <template #subtitle>
-        subtitle
-      </template>
-    </VSlider>
+    <VSlider />
     <VCategoryList />
     <VDelivery />
     <VAbout />

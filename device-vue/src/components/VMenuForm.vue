@@ -1,5 +1,5 @@
 <template>
-    <div class="filter">
+    <form class="filter" @submit="onSubmit">
         <div class="filter-title">Фильтр:</div>
         <div class="filter-line"></div>
         <div class="filter-text">Стоимость</div>
@@ -43,11 +43,31 @@
             </div>
         </div>
         <div class="filter-nav">
-            <a class="filter_button" href="#">Показать</a>
+            <VMainButton class="filter__button" :width="buttonWidth" type="submit">Показать</VMainButton>
         </div>
-
-    </div>
+    </form>
 </template>
+
+<script>
+import VMainButton from "@/components/VMainButton.vue";
+
+export default {
+    components: {
+        VMainButton,
+    },
+    data() {
+        return {
+            buttonWidth: '210px'
+        }
+    },
+    methods: {
+        onSubmit(e) {
+            e.preventDefault()
+            console.log('onSubmit',e)
+        }
+    }
+}
+</script>
 
 <style scoped lang="scss">
 .filter {
@@ -98,16 +118,6 @@
         flex-direction: column;
         gap: 21px;
         padding-bottom: 46px;
-    }
-
-    &-nav {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    &__button {
-        @include button-main(210px);
     }
 }
 </style>

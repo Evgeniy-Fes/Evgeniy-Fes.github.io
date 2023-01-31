@@ -86,7 +86,6 @@
         font-style: normal;
         font-weight: 800;
         font-size: 16px;
-        line-height: 19px;
         letter-spacing: 0.2em;
         text-transform: uppercase;
         color: $color-text-main;

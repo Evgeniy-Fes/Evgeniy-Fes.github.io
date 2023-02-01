@@ -3,57 +3,37 @@
         <div class="filter-title">Фильтр:</div>
         <div class="filter-line"></div>
         <div class="filter-text">Стоимость</div>
-        <div class="filter-form">
-            <input type="range" class="min" min="0" max="1000" value="300" step="10">
-            <input type="range" class="max" min="0" max="1000" value="700" step="10">
+        <div class="filter-range">
+            <VRange />
         </div>
         <div class="filter-line"></div>
         <div class="filter-text">Цвет</div>
         <div class="filter-checkbox">
-            <div>
-                <input type="checkbox" id="black" name="interest" value="black" checked />
-                <label for="black">Черный</label>
-            </div>
-            <div>
-                <input type="checkbox" id="white" name="interest" value="white" checked />
-                <label for="white">Белый</label>
-            </div>
-            <div>
-                <input type="checkbox" id="blue" name="interest" value="blue" />
-                <label for="blue">Синий</label>
-            </div>
-            <div>
-                <input type="checkbox" id="red" name="interest" value="red" />
-                <label for="red">Красный</label>
-            </div>
-            <div>
-                <input type="checkbox" id="pink" name="interest" value="pink" />
-                <label for="pink">Розовый</label>
-            </div>
+            <VCheckbox />
         </div>
+        <div class="filter-line"></div>
         <div class="filter-text">Bluetooth</div>
         <div class="filter-radio">
-            <div class="filter-radio-wrapper">
-                <input type="radio" id="Choice1" name="choice" value="yes" checked>
-                <label for="Choice1">Есть</label>
-            </div>
-            <div class="filter-radio-wrapper">
-                <input type="radio" id="Choice2" name="choice" value="no">
-                <label for="Choice2">Нет</label>
-            </div>
+            <VRadio />
         </div>
         <div class="filter-nav">
-            <VMainButton class="filter__button" :width="buttonWidth" type="submit">Показать</VMainButton>
+            <VButton class="filter__button" :width="buttonWidth" type="submit">Показать</VButton>
         </div>
     </form>
 </template>
 
 <script>
-import VMainButton from "@/components/VMainButton.vue";
+import VButton from "@/components/VButton.vue";
+import VCheckbox from "@/components/VCheckbox.vue";
+import VRadio from "@/components/VRadio.vue";
+import VRange from "@/components/VRange.vue";
 
 export default {
     components: {
-        VMainButton,
+        VButton,
+        VCheckbox,
+        VRadio,
+        VRange
     },
     data() {
         return {
@@ -84,6 +64,7 @@ export default {
         text-transform: uppercase;
         color: $color-text-main;
         padding-bottom: 60px;
+        line-height: 30px;
     }
 
     &-text {

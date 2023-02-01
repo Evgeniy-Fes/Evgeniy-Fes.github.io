@@ -36,7 +36,7 @@
                         </div>
 
                         <div class="contacts-row">
-                            <a class="about-nav" href="">Подробнее о нас</a>
+                            <VButton class="about-nav" :width="buttonWidth" href="">Подробнее о нас</VButton>
                         </div>
                     </div>
                 </div>
@@ -62,7 +62,7 @@
                         </div>
 
                         <div class="contacts-row">
-                            <a class="contacts-nav" href="">Напишите нам</a>
+                            <VButton class="contacts-nav" :width="buttonWidth" href="">Напишите нам</VButton>
                         </div>
                     </div>
                 </div>
@@ -100,7 +100,18 @@
 </template>
 
 <script>
+import VButton from "@/components/VButton.vue";
 
+export default {
+    components: {
+        VButton,
+    },
+    data() {
+        return {
+            buttonWidth: '270px'
+        }
+    }
+}
 </script>
 
 <style scoped lang="scss">
@@ -156,7 +167,7 @@
 
 
     &-nav {
-        @include button-main(270px);
+        background: #ffffff;
     }
 }
 
@@ -209,7 +220,7 @@
     }
 
     &-nav {
-        @include button-main(259px);
+        background: #ffffff;
     }
 }
 

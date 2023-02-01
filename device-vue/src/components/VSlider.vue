@@ -32,7 +32,7 @@
                             мощным лазером, замаскированным под стандартную камеру.
                         </p>
                         <div class="slider-decription__nav">
-                            <a class="slick-menu__button" href="#">Подробнее</a>
+                            <VButton class="slick-menu__button" :width="buttonWidth" href="#">Подробнее</VButton>
                         </div>
                         <div class="description-block">
                             <ul class="block">
@@ -52,7 +52,7 @@
                             мощным лазером, замаскированным под стандартную камеру.
                         </p>
                         <div class="slider-decription__nav">
-                            <a class="slick-menu__button" href="#">Подробнее</a>
+                            <VButton class="slick-menu__button" :width="buttonWidth" href="#">Подробнее</VButton>
                         </div>
                         <div class="description-block">
                             <ul class="block">
@@ -72,7 +72,7 @@
                             мощным лазером, замаскированным под стандартную камеру.
                         </p>
                         <div class="slider-decription__nav">
-                            <a class="slick-menu__button" href="#">Подробнее</a>
+                            <VButton class="slick-menu__button" :width="buttonWidth" href="#">Подробнее</VButton>
                         </div>
                         <div class="description-block">
                             <ul class="block">
@@ -96,6 +96,7 @@
 
 <script>
 import VueSlickCarousel from 'vue-slick-carousel'
+import VButton from './VButton.vue'
 import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 // optional style for arrows & dots
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
@@ -107,11 +108,6 @@ export default {
             type: String,
         },
     },
-    data() {
-        return {
-            huy: 'huy'
-        }
-    },
     mounted() {
         this.$refs.slickImg.asNavFor = this.$refs.slickMenu
         this.$refs.slickMenu.asNavFor = this.$refs.slickImg
@@ -120,6 +116,12 @@ export default {
     },
     components: {
         VueSlickCarousel,
+        VButton
+    },
+    data() {
+        return {
+            buttonWidth: '220px'
+        }
     },
 }
 </script>
@@ -138,16 +140,17 @@ export default {
     max-width: 100%;
     width: 560px;
 
-    
-    &__img{
+
+    &__img {
         pointer-events: none;
     }
+
     .slick-next:before,
-    .slick-prev:before{
+    .slick-prev:before {
         display: none;
     }
 
-    &__arrow{
+    &__arrow {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -159,10 +162,11 @@ export default {
         align-items: center;
         z-index: 777;
 
-        &_left{
+        &_left {
             left: 0;
         }
-        &_right{
+
+        &_right {
             right: 0;
         }
     }
@@ -173,7 +177,7 @@ export default {
     width: 560px;
     position: relative;
 
-    &__dot{
+    &__dot {
         display: flex;
         width: 100%;
         height: 100%;
@@ -211,7 +215,8 @@ export default {
     }
 
     &__button {
-        @include button-main(210px);
+        background: #ffffff;
+        width: 220px;
     }
 
     .slider-decription {

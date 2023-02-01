@@ -5,9 +5,9 @@
                 <ul class="delivery-left-list">
                     <li class="delivery-left-item" v-for="(item, idx) of deliveryData" :key="idx"
                         @click.prevent="changeCurrentTab(item)">
-                        <a :class="['delivery-left-nav', { active: item.active }]" :href="`#${item.buttonId}`">
+                        <VButton :class="['delivery-left-nav', { active: item.active }]" :width="buttonWidth" :href="`#${item.buttonId}`">
                             {{ item.title }}
-                        </a>
+                        </VButton>
                     </li>
                 </ul>
             </div>
@@ -42,9 +42,15 @@
 </template>
 
 <script>
+import VButton from './VButton.vue'
+
 export default {
+    comments: {
+        VButton
+    },
     data() {
         return {
+            buttonWidth: '160px',
             deliveryData: [
                 {
                     buttonId: 'delivery-info-1',

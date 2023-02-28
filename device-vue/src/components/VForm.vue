@@ -4,17 +4,17 @@
         <div class="filter-line"></div>
         <div class="filter-text">Стоимость</div>
         <div class="filter-range">
-            <VRange />
+            <VFormRange />
         </div>
         <div class="filter-line"></div>
         <div class="filter-text">Цвет</div>
         <div class="filter-checkbox">
-            <VCheckbox />
+            <VFormCheckbox />
         </div>
         <div class="filter-line"></div>
         <div class="filter-text">Bluetooth</div>
         <div class="filter-radio">
-            <VRadio />
+            <VFormRadio />
         </div>
         <div class="filter-nav">
             <VButton class="filter__button" :width="buttonWidth" type="submit">Показать</VButton>
@@ -24,16 +24,16 @@
 
 <script>
 import VButton from "@/components/VButton.vue";
-import VCheckbox from "@/components/VCheckbox.vue";
-import VRadio from "@/components/VRadio.vue";
-import VRange from "@/components/VRange.vue";
+import VFormRange from "@/components/VFormRange.vue";
+import VFormRadio from "@/components/VFormRadio.vue";
+import VFormCheckbox from "@/components/VFormCheckbox.vue";
 
 export default {
     components: {
         VButton,
-        VCheckbox,
-        VRadio,
-        VRange
+        VFormRange,
+        VFormRadio,
+        VFormCheckbox
     },
     data() {
         return {
@@ -43,7 +43,7 @@ export default {
     methods: {
         onSubmit(e) {
             e.preventDefault()
-            console.log('onSubmit',e)
+            console.log('onSubmit', e)
         }
     }
 }

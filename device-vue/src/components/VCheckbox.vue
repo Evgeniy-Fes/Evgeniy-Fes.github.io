@@ -1,6 +1,6 @@
 <template>
   <label class="checkbox-label">
-    <input :checked="checked" :value="value" type="checkbox" class="real-checkbox" @change="updateInput">
+    <input type="checkbox" class="real-checkbox" :checked="checked" :value="value" @change="updateInput">
     <span class="custom-checkbox" />
     {{ label }}
   </label>
@@ -53,6 +53,12 @@ export default {
 <style lang="scss" scoped>
 .checkbox-label{
   cursor: pointer;
+  font-family: $font-rubic;
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+color: #000000;
 }
 .real-checkbox {
     width: 0;

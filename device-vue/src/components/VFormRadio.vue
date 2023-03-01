@@ -1,41 +1,46 @@
 <template>
-    <div>
-        <div class="form-group">
-            <label>
-                <input type="radio" name="choice" value="yes" class="real-radio" v-model="pick">
-                <span class="custom-radio"></span>
-                Есть
-            </label>
-        </div>
-        <div class="form-group">
-            <label>
-                <input type="radio" name="choice" value="no" class="real-radio" v-model="pick">
-                <span class="custom-radio"></span>
-                Нет
-            </label>
-        </div>
+    <div class="radio-wrapper">
+        <VRadio v-for="item in radio" :key="item.id" :label="item.label" :value="item.id" v-model="item.checked" />
     </div>
 </template>
 
 <script>
+import VRadio from './VRadio.vue';
+
 export default {
     data() {
         return {
-            pick: null
+            radio: [
+                {
+                    label: 'Есть',
+                    id: 1,
+                    checked: false,
+                },
+                {
+                    label: 'Нет',
+                    id: 2,
+                    checked: true,
+                },
+            ],
         }
+    },
+    methods: {
+        updateInput(e) {
+            this.inputText = e.target.value
+        }
+    },
+    components: {
+        VRadio,
     }
 }
 </script>
 
 <style scoped lang="scss">
-.custom-radio {
-    display: inline-block;
-width: 16px;
-height: 16px;
-background: #ffffff;
-border: 2px solid black;
-border-radius: 50%;
-vertical-align: text-top;
-margin-right: 5px;
+.radio-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    flex-direction: column;
 }
 </style>

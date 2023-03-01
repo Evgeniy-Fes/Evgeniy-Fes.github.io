@@ -7,13 +7,6 @@
             :value="item.id"
             v-model="item.checked"
         />
-
-        <input v-model="firstName" />
-        <input v-model="lastName" />
-        <input v-model="middleName" />
-        <input :value="inputText" @input="updateInput" />
-        {{ fio }}
-        {{ inputText }}
     </div>
 </template>
 
@@ -81,7 +74,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 10px;
+    gap: 17px;
     flex-direction: column;
 }
 </style>

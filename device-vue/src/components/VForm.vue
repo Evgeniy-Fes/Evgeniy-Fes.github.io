@@ -9,12 +9,17 @@
         <div class="filter-line"></div>
         <div class="filter-text">Цвет</div>
         <div class="filter-checkbox">
-            <VFormCheckbox />
+            <div class="checkbox-wrapper">
+                <VCheckbox v-for="item in checkboxes" :key="item.id" :label="item.label" :value="item.id"
+                    v-model="item.checked" />
+            </div>
         </div>
         <div class="filter-line"></div>
         <div class="filter-text">Bluetooth</div>
         <div class="filter-radio">
-            <VFormRadio />
+            <div class="radio-wrapper">
+                <VRadio v-for="item in radio" :key="item.id" :label="item.label" :value="item.id" v-model="item.checked" />
+            </div>
         </div>
         <div class="filter-nav">
             <VButton class="filter__button" :width="buttonWidth" type="submit">Показать</VButton>
@@ -25,27 +30,69 @@
 <script>
 import VButton from "@/components/VButton.vue";
 import VFormRange from "@/components/VFormRange.vue";
-import VFormRadio from "@/components/VFormRadio.vue";
-import VFormCheckbox from "@/components/VFormCheckbox.vue";
+import VRadio from "@/components/VRadio.vue";
+import VCheckbox from "@/components/VCheckbox.vue";
 
 export default {
-    components: {
-        VButton,
-        VFormRange,
-        VFormRadio,
-        VFormCheckbox
-    },
     data() {
         return {
-            buttonWidth: '210px'
+            buttonWidth: '210px',
+            radio: [
+                {
+                    label: 'Есть',
+                    id: 1,
+                    checked: false,
+                },
+                {
+                    label: 'Нет',
+                    id: 2,
+                    checked: true,
+                },
+            ],
+            checkboxes: [
+                {
+                    label: 'Белый',
+                    id: 1,
+                    checked: false,
+                },
+                {
+                    label: 'Черный',
+                    id: 2,
+                    checked: true,
+                },
+                {
+                    label: 'Синий',
+                    id: 3,
+                    checked: false,
+                },
+                {
+                    label: 'Красный',
+                    id: 4,
+                    checked: true,
+                },
+                {
+                    label: 'Розовый',
+                    id: 5,
+                    checked: false,
+                },
+            ],
         }
     },
     methods: {
         onSubmit(e) {
             e.preventDefault()
             console.log('onSubmit', e)
-        }
-    }
+        },
+        updateInput(e) {
+            this.inputText = e.target.value
+        },
+    },
+    components: {
+        VButton,
+        VFormRange,
+        VRadio,
+        VCheckbox
+    },
 }
 </script>
 
@@ -100,5 +147,20 @@ export default {
         gap: 21px;
         padding-bottom: 46px;
     }
+}
+.checkbox-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 17px;
+    flex-direction: column;
+}
+
+.radio-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    flex-direction: column;
 }
 </style>

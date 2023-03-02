@@ -1,6 +1,10 @@
 <template>
     <label class="radio-label">
-        <input type="radio" class="real-radio" name="choise" :checked="checked" :value="value" @change="updateInput">
+        <input type="radio" class="real-radio" 
+        :name="name" 
+        :checked="checked" 
+        :value="value" 
+        @change="updateInput">
         <span class="custom-radio" />
         {{ label }}
     </label>
@@ -13,6 +17,10 @@ export default {
         event: 'change',
     },
     props: {
+        name: {
+            type: String,
+            required: true,
+        },
         value: {
             type: Number,
             default: null,

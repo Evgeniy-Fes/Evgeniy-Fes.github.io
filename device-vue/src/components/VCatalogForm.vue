@@ -1,35 +1,45 @@
 <template>
-    <form class="filter" @submit="onSubmit">
-        <div class="filter-title">Фильтр:</div>
-        <div class="filter-line"></div>
-        <div class="filter-text">Стоимость</div>
-        <div class="filter-range">
-            <VFormRange />
+    <form class="catalog-form" @submit="onSubmit">
+        <div class="catalog-form-title">Фильтр:</div>
+        <div class="catalog-form-line"></div>
+        <div class="catalog-form-text">Стоимость</div>
+        <div class="catalog-form-range">
+            <VRange />
         </div>
-        <div class="filter-line"></div>
-        <div class="filter-text">Цвет</div>
-        <div class="filter-checkbox">
+        <div class="catalog-form-line"></div>
+        <div class="catalog-form-text">Цвет</div>
+        <div class="catalog-form-checkbox">
             <div class="checkbox-wrapper">
-                <VCheckbox v-for="item in checkboxes" :key="item.id" :label="item.label" :value="item.id"
-                    v-model="item.checked" />
+                <VCheckbox v-for="item in checkboxes" 
+                :key="item.id" 
+                :label="item.label" 
+                :value="item.id"
+                v-model="item.checked" />
             </div>
         </div>
-        <div class="filter-line"></div>
-        <div class="filter-text">Bluetooth</div>
-        <div class="filter-radio">
+        <div class="catalog-form-line"></div>
+        <div class="catalog-form-text">Bluetooth</div>
+        <div class="catalog-form-radio">
             <div class="radio-wrapper">
-                <VRadio v-for="item in radio" :key="item.id" :label="item.label" :value="item.id" v-model="item.checked" />
+                <VRadio v-for="item in radio" 
+                :key="item.id" 
+                :label="item.label" 
+                :value="item.id" 
+                :name="item.name"
+                v-model="item.checked" />
             </div>
         </div>
-        <div class="filter-nav">
-            <VButton class="filter__button" :width="buttonWidth" type="submit">Показать</VButton>
+        <div class="catalog-form-nav">
+            <VButton class="catalog-form__button" 
+            :width="buttonWidth" 
+            type="submit"> Показать </VButton>
         </div>
     </form>
 </template>
 
 <script>
 import VButton from "@/components/VButton.vue";
-import VFormRange from "@/components/VFormRange.vue";
+import VRange from "@/components/VRange.vue";
 import VRadio from "@/components/VRadio.vue";
 import VCheckbox from "@/components/VCheckbox.vue";
 
@@ -42,11 +52,13 @@ export default {
                     label: 'Есть',
                     id: 1,
                     checked: false,
+                    name: 'choise',
                 },
                 {
                     label: 'Нет',
                     id: 2,
                     checked: true,
+                    name: 'choise',
                 },
             ],
             checkboxes: [
@@ -89,7 +101,7 @@ export default {
     },
     components: {
         VButton,
-        VFormRange,
+        VRange,
         VRadio,
         VCheckbox
     },
@@ -97,7 +109,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.filter {
+.catalog-form {
     padding-top: 25px;
     padding-left: 60px;
     width: 320px;

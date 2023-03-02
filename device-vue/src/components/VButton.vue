@@ -25,7 +25,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.button{
+.button {
   display: inline-block;
   width: auto;
   font-weight: 800;
@@ -43,7 +43,7 @@ export default {
   border: none;
   cursor: pointer;
 
-  &::before{
+  &::before {
     content: '';
     display: block;
     height: 8px;
@@ -56,7 +56,7 @@ export default {
     z-index: 0;
   }
 
-  &__text{
+  &__text {
     position: relative;
     z-index: 1;
   }

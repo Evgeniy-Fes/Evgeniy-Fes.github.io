@@ -32,7 +32,8 @@
                             мощным лазером, замаскированным под стандартную камеру.
                         </p>
                         <div class="slider-decription__nav">
-                            <VButton class="slick-menu__button" :width="buttonWidth" href="#">Подробнее</VButton>
+                            <VButton class="slick-menu__button" 
+                            :width="buttonWidth" href="#">Подробнее</VButton>
                         </div>
                         <div class="description-block">
                             <ul class="block">

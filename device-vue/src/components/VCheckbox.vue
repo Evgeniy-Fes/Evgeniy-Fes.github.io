@@ -1,6 +1,10 @@
 <template>
   <label class="checkbox-label">
-    <input type="checkbox" class="real-checkbox" :checked="checked" :value="value" @change="updateInput">
+    <input type="checkbox" 
+    class="real-checkbox" 
+    :checked="checked" 
+    :value="value" 
+    @change="updateInput">
     <span class="custom-checkbox" />
     {{ label }}
   </label>
@@ -26,21 +30,7 @@ export default {
       default: ''
     },
   },
-  // computed: {
-  //   value: {
-  //     get() {
-  //       return this.$props.modelValue
-  //     },
-  //     set(val) {
-  //       this.$emit('update:modelValue', val)
-  //     }
-  //   }
-  // },
-  mounted() {
-  },
-  destroyed() {
-    console.log('destroyed')
-  },
+  
   methods: {
     updateInput(e) {
       let isChecked = e.target.checked

@@ -7,7 +7,9 @@
       <div class="title-menu">
         <ul class="title-menu-list">
           <li class="title-menu-item">
-            <a class="title-menu-nav" href="#">Главная</a>
+            <router-link to="/">
+              <a class="title-menu-nav" href="#">Главная</a>
+            </router-link>
           </li>
           <li class="title-menu-img">
             <img class="title-menu-arrows" src="@/assets/ArrowMenu.svg">
@@ -27,8 +29,8 @@
     <div class="catalog-bg">
       <div class="container">
         <div class="catalog-page">
-          <VForm />
-          <VProduct />
+          <VCatalogForm />
+          <VCatalogProduct />
         </div>
       </div>
     </div>
@@ -36,13 +38,13 @@
 </template>
 
 <script>
-import VForm from '@/components/VForm.vue'
-import VProduct from '@/components/VProduct.vue'
+import VCatalogForm from '@/components/VCatalogForm.vue'
+import VCatalogProduct from '@/components/VCatalogProduct.vue'
 export default {
 
   components: {
-    VForm,
-    VProduct
+    VCatalogForm,
+    VCatalogProduct
   }
 }
 </script>

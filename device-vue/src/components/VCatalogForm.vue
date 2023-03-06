@@ -1,14 +1,14 @@
 <template>
     <form class="catalog-form" @submit="onSubmit">
-        <div class="catalog-form-title">Фильтр:</div>
-        <div class="catalog-form-line"></div>
-        <div class="catalog-form-text">Стоимость</div>
-        <div class="catalog-form-range">
+        <div class="catalog-form__title">Фильтр:</div>
+        <div class="catalog-form__line"></div>
+        <div class="catalog-form__text">Стоимость</div>
+        <div class="catalog-form__range">
             <VRange />
         </div>
-        <div class="catalog-form-line"></div>
-        <div class="catalog-form-text">Цвет</div>
-        <div class="catalog-form-checkbox">
+        <div class="catalog-form__line"></div>
+        <div class="catalog-form__text">Цвет</div>
+        <div class="catalog-form__checkbox">
             <div class="checkbox-wrapper">
                 <VCheckbox v-for="item in checkboxes" 
                 :key="item.id" 
@@ -17,11 +17,11 @@
                 v-model="item.checked" />
             </div>
         </div>
-        <div class="catalog-form-line"></div>
-        <div class="catalog-form-text">Bluetooth</div>
-        <div class="catalog-form-radio">
+        <div class="catalog-form__line"></div>
+        <div class="catalog-form__text">Bluetooth</div>
+        <div class="catalog-form__radio">
             <div class="radio-wrapper">
-                <VRadio v-for="item in radio" 
+                <VRadio v-for="item in radios" 
                 :key="item.id" 
                 :label="item.label" 
                 :value="item.id" 
@@ -29,7 +29,7 @@
                 v-model="item.checked" />
             </div>
         </div>
-        <div class="catalog-form-nav">
+        <div class="catalog-form__nav">
             <VButton class="catalog-form__button" 
             :width="buttonWidth" 
             type="submit"> Показать </VButton>
@@ -47,7 +47,7 @@ export default {
     data() {
         return {
             buttonWidth: '210px',
-            radio: [
+            radios: [
                 {
                     label: 'Есть',
                     id: 1,
@@ -114,7 +114,7 @@ export default {
     padding-left: 60px;
     width: 320px;
 
-    &-title {
+    &__title {
         font-family: $font-raleway;
         font-style: normal;
         font-weight: 800;
@@ -126,7 +126,7 @@ export default {
         line-height: 30px;
     }
 
-    &-text {
+    &__text {
         font-family: $font-rubic;
         font-style: normal;
         font-weight: 700;
@@ -138,7 +138,7 @@ export default {
         padding-bottom: 20px;
     }
 
-    &-line {
+    &__line {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -146,14 +146,14 @@ export default {
         border: 1px solid #000000;
     }
 
-    &-checkbox {
+    &__checkbox {
         display: flex;
         flex-direction: column;
         gap: 18px;
         padding-bottom: 30px;
     }
 
-    &-radio {
+    &__radio {
         display: flex;
         flex-direction: column;
         gap: 21px;

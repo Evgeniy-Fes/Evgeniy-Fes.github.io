@@ -1,5 +1,14 @@
 <template>
     <div>
+        <div class="product-card1">
+            <img class="product-card1__img" :src="require('@/assets/' + imgSrc)">
+            <div class="product-card1__subtitle">
+                <p class="product-card1__text">{{ name }}</p>
+                <slot name="name"></slot>
+                <p class="product-card1__price">{{ price }}</p>
+                <slot name="price"></slot>
+            </div>
+        </div>
         <ul>
             <li v-for="data in slotsData" v-bind:key="data">
                 <slot :item="data"></slot>

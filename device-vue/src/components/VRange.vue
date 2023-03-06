@@ -1,9 +1,9 @@
 <template>
    <div class="range_container">
-      <div class="sliders_control">
-         <input id="fromSlider" type="range" step="1" value="0" min="0" max="10000" />
-         <input id="toSlider" type="range" step="1" value="1000" min="0" max="10000" />
-      </div>
+      <form class="sliders_control">
+         <input id="fromSlider" type="range" step="1" value="20" min="0" max="100" />
+         <input id="toSlider" type="range" step="1" value="90" min="0" max="100" />
+      </form>
       <div class="range-text">
          <div class="text">от 0</div>
          <div class="text">до 10000</div>

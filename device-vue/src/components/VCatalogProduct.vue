@@ -12,23 +12,32 @@
             </div>
         </div>
         <div class="catalog-product">
-            <VProductCard1
-            v-for="product in products"
-            :key="product.id"
-            :imgSrc="product.imgSrc"
-            :name="product.name"
-            :price="product.price"
+            <VProductCard1 
+                v-for="(product, idx) in products" 
+                :key="idx" 
+                :imgSrc="product.imgSrc" 
+                :name="product.name"
+                :price="product.price" 
             />
-            <VProductCard2>
-                <!-- <template v-slot="slotProps">
-                    <p>{{ slotProps.item }}</p>
-                </template> -->
+            <VProductCard2
+                v-for="(product, idx) in products" 
+                :key="idx" 
+            >
+                <template #image>
+                    <img :src="product.imgSrc">
+                </template>
+                <template #name>
+                    {{ product.name }}
+                </template>
+                <template #price>
+                    {{ product.price }}
+                </template>
             </VProductCard2>
         </div>
-        <div class="catalog-loader">
+        <div class="catalog-loader" v-if="isProductsExisted">
             <a class="catalog-loader__nav">Загрузить еще</a>
         </div>
-        <div class="catalog-scroll">
+        <div class="catalog-scroll" v-if="isProductsExisted">
             <div class="catalog-scroll__buttom">
                 <a class="catalog-scroll__backward">назад</a>
             </div>
@@ -45,36 +54,34 @@
 <script>
 import VProductCard1 from '@/components/VProductCard1.vue';
 import VProductCard2 from '@/components/VProductCard2.vue';
+import { getProducts } from '@/mocks/products'
 
 export default {
     data() {
         return {
-            products: [
-                {
-                    imgSrc: "product-1.jpg",
-                    name: "Любительская селфи-палка",
-                    price: "500 ₽",
-                    id: "card1"
-                },
-                {
-                    imgSrc: "product-2.jpg",
-                    name: "Профессиональная селфи-палка",
-                    price: "1500 ₽",
-                    id: "card2"
-                },
-                {
-                    imgSrc: "product-3.jpg",
-                    name: "Непотопляемая селфи-палка",
-                    price: "2500 ₽",
-                    id: "card3"
-                },
-                {
-                    imgSrc: "product-4.jpg",
-                    name: "Селфи-палка «Следуй за мной»",
-                    price: "1500 ₽",
-                    id: "card4"
+            productsRaw: [],
+        }
+    },
+    mounted() {
+        getProducts().then(res => {
+            this.productsRaw = res
+        })
+        // const res = await getProducts()
+    },
+    computed: {
+        products() {
+            const arr = this.productsRaw.map(el => {
+                return {
+                    imgSrc: el.image_url,
+                    name: el.name,
+                    price: el.price + ' ₽',
                 }
-            ]
+            })
+
+            return arr
+        },
+        isProductsExisted() {
+            return !!this.productsRaw.length
         }
     },
     components: {

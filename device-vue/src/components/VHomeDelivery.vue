@@ -45,7 +45,7 @@
 import VButton from './VButton.vue'
 
 export default {
-    comments: {
+    components: {
         VButton
     },
     data() {

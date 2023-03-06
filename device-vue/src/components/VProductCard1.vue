@@ -1,6 +1,6 @@
 <template>
     <div class="product-card1">
-        <img class="product-card1__img" :src="require('@/assets/' + imgSrc)">
+        <img class="product-card1__img" :src="imgSrc">
         <div class="product-card1__subtitle">
             <p class="product-card1__text">{{ name }}</p>
             <p class="product-card1__price">{{ price }}</p>
@@ -13,15 +13,15 @@ export default {
     props: {
         imgSrc: {
             type: String,
-                default: ""
+            default: ""
         },
         name: {
             type: String,
-                default: ""
+            default: ""
         },
         price: {
             type: String,
-                default: ""
+            default: ""
         }
     }
 }

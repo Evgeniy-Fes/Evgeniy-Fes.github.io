@@ -1,19 +1,21 @@
 <template>
-    <div>
-        <div class="product-card1">
-            <img class="product-card1__img" :src="require('@/assets/' + imgSrc)">
-            <div class="product-card1__subtitle">
-                <p class="product-card1__text">{{ name }}</p>
-                <slot name="name"></slot>
-                <p class="product-card1__price">{{ price }}</p>
-                <slot name="price"></slot>
-            </div>
+    <div class="product-card1">
+        <div class="product-card1__img-wrapper">
+            <slot name="image"></slot>
         </div>
-        <ul>
+        <div class="product-card1__subtitle">
+            <p class="product-card1__text">
+                <slot name="name"></slot>
+            </p>
+            <p class="product-card1__price">
+                <slot name="price"></slot>
+            </p>
+        </div> 
+        <!-- <ul>
             <li v-for="data in slotsData" v-bind:key="data">
                 <slot :item="data"></slot>
             </li>
-        </ul>
+        </ul> -->
     </div>
 </template>
 
@@ -21,37 +23,54 @@
 export default {
     data() {
         return {
-            slotsData: ["a", "b", "c", "d"]
-            // products: [
-            //     {
-            //         imgSrc: "product-1.jpg",
-            //         name: "Любительская селфи-палка",
-            //         price: "500 ₽",
-            //         id: "card1"
-            //     },
-            //     {
-            //         imgSrc: "product-2.jpg",
-            //         name: "Профессиональная селфи-палка",
-            //         price: "1500 ₽",
-            //         id: "card2"
-            //     },
-            //     {
-            //         imgSrc: "product-3.jpg",
-            //         name: "Непотопляемая селфи-палка",
-            //         price: "2500 ₽",
-            //         id: "card3"
-            //     },
-            //     {
-            //         imgSrc: "product-4.jpg",
-            //         name: "Селфи-палка «Следуй за мной»",
-            //         price: "1500 ₽",
-            //         id: "card4"
-            //     }
-            // ]
         }
     }
 }
 
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.product-card1__img-wrapper{
+    img{
+        width: 360px;
+        height: 380px;
+        margin-bottom: 32px;
+    }
+}
+.product-card1 {
+    width: 360px;
+    height: 452px;
+
+    &__img {
+        width: 360px;
+        height: 380px;
+        margin-bottom: 32px;
+    }
+
+    &__subtitle {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__text {
+        font-family: $font-rubic;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 20px;
+        letter-spacing: -0.02em;
+        color: $color-text-main;
+    }
+
+    &__price {
+        width: 80px;
+        font-family: $font-rubic;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 20px;
+        text-align: right;
+        color: $color-text-desc;
+    }
+}
+</style>

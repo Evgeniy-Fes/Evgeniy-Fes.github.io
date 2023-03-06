@@ -2,7 +2,7 @@
     <div class="slider container">
         <div class="slider-galery">
             <div class="slick-img">
-                <VueSlickCarousel ref="slickImg" :arrow="true" :dots="false">
+                <VueSlickCarousel ref="slickImg" v-bind="slickImg" @beforeChange="onBeforeChangeSlickImg">
                     <template #default>
                         <div class="slick-img__card">
                             <img class="slick-img__img" src="@/assets/slider-1.svg" alt="Квадрокоптер">
@@ -24,7 +24,7 @@
                 </VueSlickCarousel>
             </div>
             <div class="slick-menu">
-                <VueSlickCarousel ref="slickMenu" :dots="true">
+                <VueSlickCarousel ref="slickMenu" v-bind="slickMenu" @beforeChange="onBeforeChangeSlickMenu">
                     <div class="slick-carousel-description">
                         <p class="description-number">01</p>
                         <p class="description-main">Порхает как бабочка,<br>жалит как пчела!</p>
@@ -109,20 +109,35 @@ export default {
             type: String,
         },
     },
+    data() {
+        return {
+            buttonWidth: '220px',
+            slickImg: {
+                arrow: true,
+                dots: false,
+                asNavFor: this.$refs.slickMenu,
+            },
+            slickMenu: {
+                dots: true,
+                asNavFor: this.$refs.slickImg,
+            },
+        }
+    },
     mounted() {
-        this.$refs.slickImg.asNavFor = this.$refs.slickMenu
-        this.$refs.slickMenu.asNavFor = this.$refs.slickImg
+        // this.$refs.slickImg.asNavFor = this.$refs.slickMenu
+        // this.$refs.slickMenu.asNavFor = this.$refs.slickImg
     },
     methods: {
+        onBeforeChangeSlickImg(currentPosition, nextPosition) {
+            this.$refs.slickMenu.goTo(nextPosition)
+        },
+        onBeforeChangeSlickMenu(currentPosition, nextPosition) {
+            this.$refs.slickImg.goTo(nextPosition)
+        },
     },
     components: {
         VueSlickCarousel,
         VButton
-    },
-    data() {
-        return {
-            buttonWidth: '220px'
-        }
     },
 }
 </script>

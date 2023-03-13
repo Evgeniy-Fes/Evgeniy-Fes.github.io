@@ -4,7 +4,8 @@
         <div class="catalog-form__line"></div>
         <div class="catalog-form__text">Стоимость</div>
         <div class="catalog-form__range">
-            <VRange />
+            <VRange 
+            v-model="value"/>
         </div>
         <div class="catalog-form__line"></div>
         <div class="catalog-form__text">Цвет</div>

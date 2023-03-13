@@ -12,7 +12,7 @@
             </div>
         </div>
         <div class="catalog-product">
-            <VProductCard1 
+            <!-- <VProductCard1 
                 v-for="(product, idx) in products" 
                 :key="idx" 
                 :imgSrc="product.imgSrc" 
@@ -32,28 +32,30 @@
                 <template #price>
                     {{ product.price }}
                 </template>
-            </VProductCard2>
+            </VProductCard2> -->
+            <VProductCard
+                v-for="(product, idx) in products" 
+                :key="idx"
+                :imgSrc="product.imgSrc" 
+            >
+                <template #name>
+                </template>
+                <template #price>
+                </template>
+            </VProductCard>
         </div>
         <div class="catalog-loader" v-if="isProductsExisted">
             <a class="catalog-loader__nav">Загрузить еще</a>
         </div>
-        <div class="catalog-scroll" v-if="isProductsExisted">
-            <div class="catalog-scroll__buttom">
-                <a class="catalog-scroll__backward">назад</a>
-            </div>
-            <div class="catalog-scroll__pages">
-                <a class="catalog-scroll__number">1 2 3 ... 15</a>
-            </div>
-            <div class="catalog-scroll__buttom">
-                <router-link to="/123" class="catalog-scroll__forward">вперёд</router-link>
-            </div>
-        </div>
+        <VProductScroll />
     </div>
 </template>
 
 <script>
-import VProductCard1 from '@/components/VProductCard1.vue';
-import VProductCard2 from '@/components/VProductCard2.vue';
+import VProductCard from '@/components/VProductCard.vue';
+import VProductScroll from '@/components/VProductScroll.vue';
+// import VProductCard1 from '@/components/VProductCard1.vue';
+// import VProductCard2 from '@/components/VProductCard2.vue';
 import { getProducts } from '@/mocks/products'
 
 export default {
@@ -69,6 +71,11 @@ export default {
         // const res = await getProducts()
     },
     computed: {
+        // imgError() {
+        //     return {
+        //         imgSrc => imgSrc != null && undefined
+        //     }
+        // },
         products() {
             const arr = this.productsRaw.map(el => {
                 return {
@@ -85,8 +92,10 @@ export default {
         }
     },
     components: {
-        VProductCard1,
-        VProductCard2
+        VProductCard,
+        VProductScroll
+        // VProductCard1,
+        // VProductCard2
     }
 }
 </script>
@@ -175,42 +184,6 @@ export default {
         text-transform: uppercase;
         color: $color-text-main;
         cursor: pointer;
-    }
-}
-
-.catalog-scroll {
-    width: 760px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 145.5px;
-    margin: 0 auto;
-    background: #EBEBEB;
-
-    &__buttom {
-        padding: 25px;
-        font-family: $font-raleway;
-        font-style: normal;
-        font-weight: 800;
-        font-size: 18px;
-        line-height: 21px;
-        display: flex;
-        align-items: center;
-        letter-spacing: 0.2em;
-        text-transform: uppercase;
-        color: $color-text-main;
-        cursor: pointer;
-    }
-
-    &__pages {
-        font-family: $font-rubic;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 20px;
-        text-align: center;
-        color: $color-text-desc;
-        opacity: 0.3;
     }
 }
 </style>

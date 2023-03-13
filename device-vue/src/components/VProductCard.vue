@@ -1,14 +1,12 @@
 <template>
-    <div class="product-card1">
-        <div class="product-card1__img-wrapper">
-            <slot name="image"></slot>
-        </div>
-        <div class="product-card1__subtitle">
-            <p class="product-card1__text">
-                <slot name="name"></slot>
+    <div class="product-card">
+        <img class="product-card__img" :src="imgSrc">
+        <div class="product-card__subtitle">
+            <p class="product-card__text">
+                <slot name="name">{{ name }}</slot>
             </p>
-            <p class="product-card1__price">
-                <slot name="price"></slot>
+            <p class="product-card__price">
+                <slot name="price">{{ price }}</slot>
             </p>
         </div>
     </div>
@@ -19,20 +17,28 @@ export default {
     data() {
         return {
         }
+    },
+    props: {
+        imgSrc: {
+            type: String,
+            default: ""
+        },
+        name: {
+            type: String,
+            default: ""
+        },
+        price: {
+            type: String,
+            default: ""
+        }
     }
 }
 
 </script>
 
 <style scoped lang="scss">
-.product-card1__img-wrapper{
-    img{
-        width: 360px;
-        height: 380px;
-        margin-bottom: 32px;
-    }
-}
-.product-card1 {
+
+.product-card {
     width: 360px;
     height: 452px;
 

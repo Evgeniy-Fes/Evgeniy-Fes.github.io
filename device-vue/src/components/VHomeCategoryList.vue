@@ -8,10 +8,12 @@
                 <p class="category-list-text">Виртуальная реальность</p>
             </li>
             <li class="category-list-item">
-                <div class="category-list-wrapper">
-                    <img class="category-list-img category-list-mono" src="@/assets/mono.svg" alt=" Моноподы для селфи">
-                </div>
-                <p class="category-list-text">Моноподы для селфи</p>
+                <a href="#">
+                    <div class="category-list-wrapper">
+                        <img class="category-list-img category-list-mono" src="@/assets/mono.svg" alt=" Моноподы для селфи">
+                    </div>
+                    <p class="category-list-text">Моноподы для селфи</p>
+                </a>
             </li>
             <li class="category-list-item">
                 <div class="category-list-wrapper">
@@ -43,7 +45,7 @@
 
 <script>
 export default {
-    
+
 }
 </script>
 

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="92" height="40" viewBox="0 0 92 40">
+    <defs>
+        <filter id="prefix__b" width="102.2%" height="105%" x="-1.1%" y="-2.5%" filterUnits="objectBoundingBox">
+            <feOffset dy="-2" in="SourceAlpha" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+        </filter>
+        <path id="prefix__a" d="M7.692 0h76.616c2.675 0 3.645.278 4.623.801.977.523 1.745 1.29 2.268 2.268.523.978.801 1.948.801 4.623v24.616c0 2.675-.278 3.645-.801 4.623-.523.977-1.29 1.745-2.268 2.268-.978.523-1.948.801-4.623.801H7.692c-2.675 0-3.645-.278-4.623-.801-.977-.523-1.745-1.29-2.268-2.268C.278 35.953 0 34.983 0 32.308V7.692c0-2.675.278-3.645.801-4.623.523-.977 1.29-1.745 2.268-2.268C4.047.278 5.017 0 7.692 0z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <use fill="#E02F2F" xlink:href="#prefix__a"/>
+        <use fill="#000" filter="url(#prefix__b)" xlink:href="#prefix__a"/>
+        <g fill-rule="nonzero">
+            <path fill="#FFF" d="M25.74 4.316s-.254-1.961-1.033-2.824C23.717.36 22.61.353 22.102.289 18.463 0 13.006 0 13.006 0h-.013S7.536 0 3.898.29C3.39.352 2.283.36 1.293 1.491.514 2.355.26 4.316.26 4.316S0 6.616 0 8.918v2.156c0 2.303.26 4.603.26 4.603s.254 1.96 1.033 2.821c.99 1.132 2.288 1.098 2.867 1.216C6.24 19.933 13 20 13 20s5.463-.01 9.102-.296c.508-.067 1.616-.073 2.605-1.205.779-.861 1.033-2.821 1.033-2.821s.26-2.301.26-4.603V8.918c0-2.301-.26-4.602-.26-4.602z" transform="translate(33 10)"/>
+            <path fill="#E02F2F" d="M10 5L10 15 18 10z" transform="translate(33 10)"/>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/buefy/dist/buefy.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page">
+    <div class="bg__star bg__star--left"></div>
+    <div class="bg__star bg__star--right"></div>
+    <div class="bg__top"></div>
+    <div class="star star--left"><img src="img/star-red.svg" alt="star"></div>
+    <div class="star star--right"><img src="img/star-red.svg" alt="star"></div>
+    <div class="star star--small star--left"><img src="img/star-red.svg" alt="star"></div>
+    <div class="star star--small star--right"><img src="img/star-red.svg" alt="star"></div>
+    <div class="ribbon">
+        <div class="ribbon__sub">
+            <svg viewBox="0 0 500 100">
+                <path id="curve1" d="M 100 90 C 200 57, 300 57, 400 90" stroke="transparent" fill="transparent"/>
+
+                <text width="100%">
+                    <textPath xlink:href="#curve1" startOffset="35%">
+                        Minters'
+                    </textPath>
+                </text>
+            </svg>
+        </div>
+        <div class="ribbon__text">
+            <svg viewBox="0 0 500 100">
+                <path id="curve2" d="M 100 90 C 200 57, 300 57, 400 90" stroke="transparent" fill="transparent"/>
+
+                <text width="100%">
+                    <textPath xlink:href="#curve2" startOffset="18%">
+                        Jackpot
+                    </textPath>
+                </text>
+            </svg>
+        </div>
+        <div class="ribbon__frame ribbon__frame--header">
+            <div class="ribbon__frame__text">
+                000'012
+                <small>Monaco</small>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="block__title">
+            <h1 class="h1">Тираж 04</h1>
+            <h3 class="h3">24.07.2020 12:00 UTC</h3>
+        </div>
+
+        <div class="pot__wrapper">
+            <div class="pot">
+                <span class="pot__text">Airdrop Pot</span>
+                <span class="pot__text">1'200 MONACO</span>
+            </div>
+            <div class="pot">
+                <span class="pot__text">Airdrop Pot</span>
+                <span class="pot__text">1'200 MONACO</span>
+            </div>
+            <div class="pot">
+                <span class="pot__text">Airdrop Pot</span>
+                <span class="pot__text">1'200 MONACO</span>
+            </div>
+        </div>
+        
+        <center><h3 class="h3">Всего разыграно</h3></center>
+
+        <div class="block__wrapper">
+            <div class="num">
+                <div class="num__row">
+                    <div class="num__item glow1">1</div>
+                    <div class="num__item">2</div>
+                    <div class="num__item">3</div>
+                    <div class="num__item">4</div>
+                    <div class="num__item">5</div>
+                </div>
+                <div class="num__row">
+                    <div class="num__item">6</div>
+                    <div class="num__item">7</div>
+                    <div class="num__item glow2">8</div>
+                    <div class="num__item">9</div>
+                    <div class="num__item glow4">0</div>
+                </div>
+                <div class="num__row">
+                    <div class="num__item">A</div>
+                    <div class="num__item">B</div>
+                    <div class="num__item glow3">C</div>
+                    <div class="num__item">D</div>
+                    <div class="num__item">E</div>
+                    <div class="num__item">F</div>
+                </div>
+            </div>
+
+            <div class="ticket desc">
+                <div class="ticket__text">
+                    <span>купить</span>
+                    <span></span>
+                    <span>билет</span>
+                </div>
+                <div class="ticket__rotated-text">тираж 04</div>
+            </div>
+        </div>
+        <div class="date__counter__wrapper">
+            <h3 class="h3">До следующего розыгрыша <br>осталось <span class="date__counter__left">5</span> <span class="date__counter__left__day">дней</span></h3>
+            <div class="date__counter date__counter--wrapper">
+                <div class="date__counter date__counter--active" style="width: 71.43%"></div>
+            </div>
+        </div>
+
+        <div class="ticket mob">
+            <div class="ticket__text">
+                <span>купить</span>
+                <span></span>
+                <span>билет</span>
+            </div>
+            <div class="ticket__rotated-text">тираж 04</div>
+        </div>
+
+        <div class="ribbon__frame">
+            <div class="ribbon__frame__text ribbon__frame__text--smaller">
+                ВСЕГО разыграно <br>
+                200'000 МОНАКО
+            </div>
+        </div>
+
+    </div>
+    <div class="footer">
+        <div class="footer__links">
+            <div class="footer__link__col">
+                <a href="#" class="footer__link">История</a>
+                <a href="#" class="footer__link">Победители</a>
+            </div>
+            <div class="footer__link__col">
+                <a href="#" class="footer__link">Правила</a>
+                <a href="#" class="footer__link">Донат в лото</a>
+            </div>
+        </div>
+        <div class="tent"><img src="img/tent.svg" alt="tent"></div>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <!-- Full bundle -->
+    <script src="https://unpkg.com/buefy/dist/buefy.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

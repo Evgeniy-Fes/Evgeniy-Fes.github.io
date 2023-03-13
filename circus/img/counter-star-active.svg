@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="63.16" height="52.06" viewBox="0 0 63.16 52.06">
+  <defs>
+    <style>
+      .a {
+        fill: url(#a);
+      }
+
+      .b {
+        fill: #7c4011;
+      }
+
+      .c {
+        fill: #cc6517;
+      }
+
+      .d {
+        fill: url(#b);
+      }
+
+      .e {
+        fill: url(#c);
+      }
+    </style>
+    <linearGradient id="a" x1="31.21" y1="2.05" x2="31.21" y2="50.01" gradientUnits="userSpaceOnUse">
+      <stop offset="0"/>
+      <stop offset="1" stop-color="#e90600"/>
+    </linearGradient>
+    <linearGradient id="b" x1="96.93" y1="121.9" x2="113.64" y2="78.24" gradientTransform="matrix(1, 0, 0, -1, -72.6, 125.68)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fe0"/>
+      <stop offset="0.23" stop-color="#ffbe00"/>
+      <stop offset="0.51" stop-color="#ffef00"/>
+      <stop offset="0.73" stop-color="#ffa900"/>
+      <stop offset="1" stop-color="#ffec00"/>
+    </linearGradient>
+    <linearGradient id="c" x1="100.87" y1="108.42" x2="108.51" y2="88.46" xlink:href="#b"/>
+  </defs>
+  <title>Asset 24_SVG</title>
+  <g>
+    <rect class="a" x="2.05" y="2.05" width="58.31" height="47.95"/>
+    <path class="b" d="M60.36,2H2.05L1.7,49.81H60.83ZM5.86,6.8H60.55l.11,17.46L5.86,24ZM5.86,45V28.79l54.83.27.11,16Z"/>
+    <g>
+      <path class="c" d="M0,0H63.16V52.06H0ZM4.16,23.94l54.81.3-.11-19H4.16Zm0,22.9H59.1L59,29.46l-54.84-.3Z"/>
+      <g>
+        <path class="d" d="M16.48,49.26l3.93-17.15L7.15,20.54,24.68,19,31.58,2.8,38.48,19,56,20.54,42.75,32.11l3.93,17.15-15.1-9ZM24.1,30.91,21.47,42.4l10.11-6,10.12,6L39.06,30.91,48,23.16l-11.74-1L31.58,11.27,27,22.12l-11.74,1Z"/>
+        <path class="e" d="M24.68,38.06l1.79-7.85-6.06-5.28,8-.72,3.15-7.4,3.16,7.4,8,.72-6.06,5.28,1.79,7.85-6.9-4.14Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

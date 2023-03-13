@@ -1,0 +1,29 @@
+$mediaXS: 375px;
+$mediaSM: 413px;
+$mediaMD: 767px;
+$mediaLG: 1200px;
+$mediaXL: 1439px;
+
+.hidden{
+    display: none;
+}
+.hidden-xl-down{
+    @media all and (max-width: $mediaXL){
+        display: none !important;
+    }
+}
+.hidden-md-down{
+    @media all and (max-width: $mediaMD){
+        display: none;
+    }
+}
+.visible-md{
+    @media all and (max-width: $mediaXL) and (min-width: $mediaMD + 1px){
+        display: block;
+    }
+}
+.visible-sm{
+    @media all and (max-width: $mediaMD){
+        display: block;
+    }
+}

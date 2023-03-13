@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+body{
+    background-color: $mainBg;
+    font-family: $Exo2;
+    line-height: 1.2;
+    font-size: 24px;
+    color: $mainTextColor;
+    position: relative;
+    font-weight: 400;
+    
+    @media all and (max-width: $mediaMD){
+        font-size: 18px;
+    }
+}
+
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 50px;
+
+    @media all and (max-width: $mediaXL){
+        max-width: 768px;
+    }
+    @media all and (max-width: $mediaMD){
+        max-width: 414px;
+        padding: 0 14px;
+    }
+}

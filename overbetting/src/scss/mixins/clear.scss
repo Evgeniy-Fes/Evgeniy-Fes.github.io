@@ -1,0 +1,135 @@
+@mixin reset-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@mixin horizontal-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@mixin  dotted-list {
+    li{
+        position: relative;
+        padding-left: 26px;
+
+        &:before{
+            content: '';
+            display: block;
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            border-radius: 2px;
+            border: solid 1px $infoColor;
+            left: 13px;
+            top: 50%;
+            margin-top: -3px;
+        }
+    }
+}
+
+@mixin reset-btn($color: $footerTextColor, 
+                $btnBg: $btnBg, 
+                $btnBgH: $btnBgHover, 
+                $btnBgA: $btnBgActive,
+                $btnBC: $btnBorderColor, 
+                $btnBCH: $btnBorderColorHover,
+                $btnBCA: $btnBorderColorActive,
+                $btnShadow: $btnBorderColor) {
+
+    padding: 0;
+    margin: 0;
+    outline: none;
+
+    border: 1px solid $btnBC;
+    border-color: $btnBC;
+    background-color: $btnBg;
+    border-radius: 6px;
+    box-shadow: inset 0 -2px 0 0 $btnShadow;
+    color: $color;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: $OpenSans;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    // transition: all .2s ease;
+    
+    span{
+        position: relative;
+        top: 0;
+    }
+
+    &:hover{
+        border: solid 1px $btnBCH;
+        background-color: $btnBgH;
+        color: $color;
+    }
+    &:active{
+        border: solid 1px $btnBCA;
+        background-color: $btnBgA;
+        color: $color;
+
+        span{
+            top: 1px;
+        }
+    }
+}
+
+@mixin content-menu($bg, $br, $ff) {
+
+    @include reset-list;
+    @include horizontal-list;
+    background-color: $bg;
+    padding: 12px;
+    display: inline-flex;
+    border-radius: $br;
+    max-width: 100%;
+    overflow: auto;
+
+    @media all and (max-width: $mediaSM){
+        padding: 10px 6px;
+        overflow: auto;
+        width: 100%;
+        margin: 16px 0;
+        max-width: none;
+    }
+
+    @media all and (max-width: $mediaXS){
+        width: calc(100% + 12px);
+        border-radius: 0;
+        margin-left: -6px;
+    }
+
+    li {
+        &:not(:last-child){
+            margin-right: 4px;
+
+            @media all and (max-width: $mediaLG){
+                margin-right: 0;
+            }
+        }
+        
+    }
+    a {
+        display: inline-block;
+        padding: 8px 16px;
+        font-size: 14px;
+        text-decoration: none;
+        font-family: $ff;
+        color: $mainTextColor;
+        border-radius: $br;
+        white-space: nowrap;
+        
+        &.active{
+            background-color: $white;
+        }
+
+        @media all and (max-width: $mediaSM){
+            font-size: 12px;
+            padding: 5px 8px;
+        }
+    }
+}

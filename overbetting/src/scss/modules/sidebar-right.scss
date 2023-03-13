@@ -1,0 +1,164 @@
+.sidebar{
+    &--right{
+        margin-left: 24px;
+        margin-right: 0;
+    }
+
+    &__r{
+        &__item{
+            background-color: $white;
+            border-radius: 6px;
+
+            &--p{
+                padding: 0 24px;
+            }
+
+            &:not(:last-child){
+                margin-bottom: 32px;
+            }
+
+            &__title{
+                background-color: $sidebarHeadBg;
+                font-family: $Roboto;
+                letter-spacing: 1px;
+                font-size: 14px;
+                text-transform: uppercase;
+                font-weight: bold;
+                padding: 24px 24px 26px;
+                border-top-left-radius: 6px;
+                border-top-right-radius: 6px;
+            }
+        }
+
+        &__cappers{
+            border-radius: 6px;
+            margin-top: -5px;
+            background-color: $white;
+            overflow: hidden;
+        }
+
+        &__capper{
+            padding: 20px 24px 32px;
+
+            &:not(:last-child){
+                background: linear-gradient(65deg, transparent 8px, $white 8px), 
+                            linear-gradient(-65deg, transparent 8px, $white 8px), 
+                            linear-gradient(65deg, transparent 6px, $bodyBg 6px), 
+                            linear-gradient(-65deg, transparent 6px, $bodyBg 6px);
+                background-size: 6px 100%;
+                background-repeat: repeat;
+                background-position: center;
+            }
+            &:last-child{
+                background-color: $white;
+                padding-bottom: 20px;
+            }
+
+            &__top{
+                margin-bottom: 10px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+            }
+
+            &__avatar{
+                width: 36px;
+                height: 36px;
+                border-radius: 100%;
+                overflow: hidden;
+                margin-right: 8px;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            &__name{
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            &__lines{
+
+            }
+
+            $capper: &;
+
+            &__line{
+                font-size: 14px;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                position: relative;
+                white-space: nowrap;
+
+                &:not(:last-child){
+                    margin-bottom: 2px;
+                }
+
+
+                &--actual{
+                    background-color: $actualColor;
+                    border-radius: 6px;
+                    overflow: hidden;
+                    padding: 0 8px;
+                    margin-left: -8px;
+                    margin-right: -8px;
+
+                    #{$capper}__text{
+                        background-color: $actualColor;
+                    }
+
+                    #{$capper}__text__val{
+                        background-color: $actualColor;
+                    }
+                }
+            }
+
+            &__link{
+                text-decoration: none;
+                color: inherit;
+            }
+
+            &__text{
+                background-color: $white;
+                position: relative;
+                z-index: 1;
+                padding: 3px 4px 3px;
+
+                &--bold{
+                    font-weight: bold;
+                }
+
+                &__dots{
+                    width: 100%;
+                    border-bottom: 1px dotted $tableBorderColor;
+                    display: block;
+                    margin-bottom: 6px;
+                }
+
+                &__inner{
+                    &--black{
+                        color: $mainTextColor;
+                    }
+                    &--grey{
+                        color: $infoColor;
+                    }
+                }
+                &__val{
+                    background-color: $white;
+                    color: $okColor;
+                    position: relative;
+                    z-index: 1;
+                    padding: 3px 0 3px 4px;
+
+                    &--actual{
+                        color: $infoColor;
+                    }
+                }
+            }
+        }
+    }
+}

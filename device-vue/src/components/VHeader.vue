@@ -44,6 +44,7 @@
 
 <script>
 export default {
+  name: 'VHeader',
   props: {
     user: Object,
   },

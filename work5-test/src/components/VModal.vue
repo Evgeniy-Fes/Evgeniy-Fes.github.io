@@ -209,6 +209,7 @@ export default {
         border-radius: 100%;
         font-size: 6px;
         display: flex;
+        color: $color-close;
         justify-content: center;
         align-items: center;
         box-sizing: border-box;

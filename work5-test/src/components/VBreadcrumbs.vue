@@ -19,6 +19,7 @@
     line-height: 21px;
     color: $color-text-main;
     text-decoration: none;
+    white-space: nowrap;
   }
 
   &__arrow{

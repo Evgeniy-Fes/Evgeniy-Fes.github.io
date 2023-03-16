@@ -130,6 +130,7 @@ export default {
   font-size: 14px;
   line-height: 21px;
   color: $color-text-main;
+  vertical-align: middle;
 
   &--last{
     width: 328px;

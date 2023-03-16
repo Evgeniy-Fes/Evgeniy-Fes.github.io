@@ -2,7 +2,7 @@
     <button type="button" :class="['btn', 'button', `button-${type}`]" :style="{
         '--width': width,
     }">
-        <span class="button__icon">
+        <span class="button__icon" v-if="$slots.icon">
             <slot name="icon" />
         </span>
         <span class="button__text">
@@ -33,7 +33,7 @@ export default {
     background-color: var(--background);
     font-weight: 400;
     font-size: 12px;
-    line-height: 21px;
+    height: 36px;
     width: var(--width);
     border: none;
     color: $color-text-light;
@@ -41,6 +41,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0;
 
     &__icon{
         display: flex;
@@ -54,20 +55,22 @@ export default {
 .button-success{
     background-color: $color-success;
 
-    &:hover{
+    &:hover,
+    &:active{
         opacity: .9;
-        color: $color-text-light;
-        background-color: $color-success;
+        color: $color-text-light !important;
+        background-color: $color-success !important;
         border: none;
     }
 }
 .button-cancel{
     background-color: $color-gray;
 
-    &:hover{
+    &:hover,
+    &:active{
         opacity: .9;
-        color: $color-text-light;
-        background-color: $color-gray;
+        color: $color-text-light !important;
+        background-color: $color-gray !important;
         border: none;
     }
 }

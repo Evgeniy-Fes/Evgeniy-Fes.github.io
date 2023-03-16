@@ -19,45 +19,7 @@
       </div>
     </div>
 
-    <!-- Модальное окно -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog store">
-        <div class="modal-content store-wrapper">
-          <div class="modal-body">
-            <div class="store-header">
-              <h1 class="modal-title fs-5 store-title" id="exampleModalLabel">Создать магазин</h1>
-              <button type="button" class="btn-close store__icons" data-bs-dismiss="modal"></button>
-            </div>
-            <div class="store-main">
-              <div class="store-select__left">
-                <div class="store-text">Шаблон</div>
-                <select class="form-select store-select store-select__text" aria-label="Пример выбора по умолчанию">
-                  <option selected>Стандартный</option>
-                  <option value="1">Один</option>
-                  <option value="2">Два</option>
-                  <option value="3">Три</option>
-                </select>
-              </div>
-              <div class="store-select__right">
-                <div class="store-text">Цветовая схема</div>
-                <select class="form-select store-select store-select__text" aria-label="Пример выбора по умолчанию">
-                  <option selected>Классическая</option>
-                  <option value="1">Один</option>
-                  <option value="2">Два</option>
-                  <option value="3">Три</option>
-                </select>
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <VButton class="button-store" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <VButton class="button-store" data-bs-toggle="modal" :data-bs-target="`#${modalId}`" ref="modalButton" @click.native="getButtonModalPosition">
       <template #icon>
         <span class="button-store-icon">+</span>
       </template>
@@ -65,6 +27,8 @@
     </VButton>
 
     <VStoreTable title="Управление магазинами" />
+
+    <VModal :id="modalId" :use-pos="true" :pos-top="modalPos.top" :pos-left="modalPos.left" />
   </div>
 </template>
 
@@ -72,19 +36,36 @@
 import VBreadcrumbs from '@/components/VBreadcrumbs.vue';
 import VButton from '@/components/VButton.vue';
 import VStoreTable from '@/components/VStoreTable.vue';
+import VModal from '@/components/VModal.vue';
 
 export default {
   name: 'StoresView',
+  data() {
+    return {
+      modalId: 'storeModal',
+      modalPos: {
+        top: null,
+        left: null,
+      }
+    }
+  },
+  methods: {
+    getButtonModalPosition() {
+      const modalButton = this.$refs.modalButton.$el
+
+      console.log('modalButton', modalButton.getBoundingClientRect())
+      const rect = modalButton.getBoundingClientRect()
+
+      this.modalPos.left = rect.left
+      this.modalPos.top = rect.bottom
+    },
+  },
   components: {
     VBreadcrumbs,
     VButton,
-    VStoreTable
+    VStoreTable,
+    VModal,
   },
-  data() {
-    return {
-
-    }
-  }
 }
 </script>
 
@@ -200,74 +181,5 @@ export default {
   margin-bottom: 36px;
   display: flex;
   align-items: center;
-}
-
-
-//modal
-.store {
-  &-header {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__icons {
-    // width: 15px;
-    // height: 15px;
-    font-size: 8px;
-    border: 1px solid $color-close;
-    padding: 14px 6px 0 0;
-    border-radius: 50%;
-  }
-
-  &-title {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 21px;
-    color: $color-text-secondary;
-    padding: 14px 0 0 14px;
-    margin-bottom: 12px;
-  }
-
-  &-text {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 21px;
-    color: $color-text-secondary;
-    padding: 0 0 5px 1px;
-  }
-
-  &-wrapper {
-    width: 617px;
-    height: 444px;
-    background: $color-text-light;
-    box-shadow: 0px 30px 38px rgba(37, 37, 37, 0.1);
-  }
-
-  &-main {
-    display: flex;
-
-  }
-
-  &-select {
-    width: 240px;
-    height: 36px;
-
-    &__text {
-      font-weight: 400;
-      font-size: 12px;
-      line-height: 21px;
-      color: $color-text-select;
-    }
-
-    &__left {
-      padding-left: 14px;
-      padding-right: 86px;
-    }
-
-    &__right {
-      padding-right: 14px;
-    }
-
-  }
 }
 </style>

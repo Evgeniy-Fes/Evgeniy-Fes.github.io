@@ -1,6 +1,6 @@
 <template>
     <div class="button">
-        <button type="button" class="btn" :style="{
+        <button type="button" class="btn btn-primary" :style="{
             '--background': color
         }" >
             <span class="button__text">
@@ -22,4 +22,5 @@ export default {
 }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+</style>
